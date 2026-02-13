@@ -79,8 +79,8 @@ const App: React.FC = () => {
               </div>
 
               {/* Action Buttons */}
-              {/* Added z-50 and pointer-events-auto to ensure clickability */}
-              <div className="flex flex-row md:flex-col gap-3 shrink-0 mt-4 md:mt-0 relative z-50 pointer-events-auto print:mt-0 print:block">
+              {/* Refined: Circular, Minimalist, Horizontal Row */}
+              <div className="flex flex-row gap-3 shrink-0 mt-4 md:mt-0 relative z-50 pointer-events-auto print:mt-0 print:block">
                 <div className="relative print:hidden">
                   <button
                     type="button"
@@ -88,15 +88,15 @@ const App: React.FC = () => {
                       e.preventDefault();
                       handlePrint();
                     }}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3 md:py-2 bg-stone-900 text-white text-sm font-bold hover:bg-black transition-colors uppercase tracking-wider shadow-sm cursor-pointer select-none active:bg-stone-800"
+                    title="Imprimir / Salvar PDF"
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#faf9f6] text-stone-600 hover:bg-stone-200 hover:text-stone-900 transition-colors shadow-sm cursor-pointer select-none active:scale-95"
                   >
-                    <Printer className="w-4 h-4" />
-                    Imprimir / PDF
+                    <Printer className="w-5 h-5" />
                   </button>
-                  {/* Feedback Tooltip for Sandboxed Environments */}
+                  {/* Feedback Tooltip */}
                   {showPrintHint && (
-                    <div className="absolute top-full mt-2 left-0 right-0 md:left-auto md:right-0 bg-red-50 border border-red-100 text-red-600 text-[10px] md:text-xs p-2 rounded shadow-sm text-center md:text-right md:whitespace-nowrap z-[60] animate-in fade-in zoom-in duration-300">
-                      Se não abrir, use <strong>Ctrl + P</strong>
+                    <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-stone-800 text-white text-[10px] px-2 py-1 rounded shadow-sm whitespace-nowrap z-[60] animate-in fade-in zoom-in duration-300">
+                      Use Ctrl + P
                     </div>
                   )}
                 </div>
@@ -105,19 +105,20 @@ const App: React.FC = () => {
                   href={PERSONAL_INFO.links.linktree}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 md:py-2 bg-white text-stone-800 text-sm font-bold hover:bg-stone-50 border border-stone-200 hover:border-stone-300 transition-all uppercase tracking-wider shadow-sm print:hidden"
+                  title="LinkTree"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-[#faf9f6] text-stone-600 hover:bg-stone-200 hover:text-stone-900 transition-colors shadow-sm print:hidden"
                 >
-                  <ExternalLink className="w-4 h-4 text-stone-500" />
-                  LinkTree
+                  <ExternalLink className="w-5 h-5" />
                 </a>
+
                 <a
                   href={PERSONAL_INFO.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 md:py-2 border border-stone-200 text-stone-600 text-sm font-bold hover:bg-stone-50 hover:text-stone-900 transition-colors uppercase tracking-wider bg-white print:hidden"
+                  title="GitHub"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-[#faf9f6] text-stone-600 hover:bg-stone-200 hover:text-stone-900 transition-colors shadow-sm print:hidden"
                 >
-                  <Github className="w-4 h-4" />
-                  GitHub
+                  <Github className="w-5 h-5" />
                 </a>
               </div>
 
