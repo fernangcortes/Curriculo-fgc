@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#faf9f6] text-stone-900;
+  }
+}
+
+@media print {
+  @page {
+    margin: 10mm 10mm 10mm 10mm;
+    size: auto;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ensure links are handled nicely */
+  a {
+    text-decoration: none !important;
+  }
+  
+  /* Force background graphics to show if needed (usually handled by browser setting, but this helps) */
+}
