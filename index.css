@@ -10,8 +10,9 @@
 
 @media print {
   @page {
-    margin: 10mm 10mm 10mm 10mm;
-    size: auto;
+    margin: 10mm;
+    size: A4 portrait;
+    /* Force portrait to fix 'horizontal' opening */
   }
 
   body {
@@ -19,12 +20,16 @@
     color: black !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    min-height: auto !important;
+    /* Prevent extra blank page caused by min-h-screen */
   }
 
-  /* Ensure links are handled nicely */
+  /* Ensure links are clickable and visible */
   a {
-    text-decoration: none !important;
+    text-decoration: underline !important;
+    color: #1c1917 !important;
+    /* Dark stone for readability */
   }
-  
+
   /* Force background graphics to show if needed (usually handled by browser setting, but this helps) */
 }

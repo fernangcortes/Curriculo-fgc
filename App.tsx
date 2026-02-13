@@ -16,11 +16,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-stone-600 selection:bg-stone-200 selection:text-stone-900 print:bg-white print:text-black">
+    <div className="min-h-screen bg-[#faf9f6] text-stone-600 selection:bg-stone-200 selection:text-stone-900 print:bg-white print:text-black print:min-h-0">
       {/* Background Grid Pattern - Hidden on Print */}
       <div className="fixed inset-0 pointer-events-none bg-grid opacity-[0.03] z-0 print:hidden"></div>
 
-      <main className="relative z-10 max-w-5xl mx-auto px-6 py-16 md:py-24 print:py-4 print:px-4 print:max-w-full">
+      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-24 print:py-0 print:px-0 print:max-w-full">
 
         {/* Header Section */}
         <header className="mb-20 print:mb-6">
