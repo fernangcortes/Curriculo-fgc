@@ -127,17 +127,17 @@ const App: React.FC = () => {
           </div>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 print:grid print:grid-cols-12 print:gap-8">
+        {/* Summary - Full width for both Print and Desktop (Design Choice: better readability) */}
+        <div className="mb-16 print:mb-6">
+          <p className="text-lg md:text-xl leading-relaxed text-stone-600 font-light border-l-2 border-stone-300 pl-6 italic print:text-sm print:pl-4 print:text-black print:leading-normal">
+            "{PERSONAL_INFO.summary}"
+          </p>
+        </div>
 
-          {/* Main Column (Left/Top) */}
-          <div className="lg:col-span-8 print:col-span-8 print:mb-0">
+        <div className="flex flex-col lg:flex-row gap-12 print:flex-col">
 
-            {/* Summary */}
-            <div className="mb-16 print:mb-6">
-              <p className="text-lg md:text-xl leading-relaxed text-stone-600 font-light border-l-2 border-stone-300 pl-6 italic print:text-sm print:pl-4 print:text-black print:leading-normal">
-                "{PERSONAL_INFO.summary}"
-              </p>
-            </div>
+          {/* Main Column (Desktop: Left, Print: Bottom) */}
+          <div className="flex-1 min-w-0 order-2 print:order-3">
 
             {/* Experience */}
             <Section title="Experiência Profissional" icon={<Camera className="w-5 h-5" />}>
@@ -174,11 +174,11 @@ const App: React.FC = () => {
 
           </div>
 
-          {/* Sidebar Column (Right/Bottom) */}
-          <div className="lg:col-span-4 space-y-12 print:col-span-4 print:space-y-6 print:mt-0">
+          {/* Sidebar Column (Desktop: Right, Print: Top) */}
+          <div className="w-full lg:w-1/3 space-y-12 order-1 lg:order-2 print:order-2 print:grid print:grid-cols-2 print:gap-8 print:space-y-0">
 
             {/* Skills */}
-            <Section title="Competências" icon={<Cpu className="w-5 h-5" />}>
+            <Section title="Competências" icon={<Cpu className="w-5 h-5" />} className="print:col-span-1">
               <div className="space-y-8 print:space-y-4">
                 {SKILLS.map((cat, idx) => (
                   <div key={idx} className="print:break-inside-avoid">
@@ -198,38 +198,41 @@ const App: React.FC = () => {
               </div>
             </Section>
 
-            {/* Education */}
-            <Section title="Formação" icon={<GraduationCap className="w-5 h-5" />}>
-              <div className="space-y-6 print:space-y-2">
-                {EDUCATION.map((edu, idx) => (
-                  <div key={idx} className="group print:break-inside-avoid">
-                    <h3 className="text-stone-800 font-medium group-hover:text-stone-500 transition-colors print:text-black print:text-sm print:font-bold">{edu.degree}</h3>
-                    <div className="text-sm text-stone-500 mt-1 flex justify-between items-center font-mono print:text-stone-800 print:text-xs print:mt-0">
-                      <span>{edu.institution}</span>
-                      <span>{edu.period}</span>
+            {/* Education & Filmography Container for Print Grid */}
+            <div className="space-y-12 print:col-span-1 print:space-y-6">
+              {/* Education */}
+              <Section title="Formação" icon={<GraduationCap className="w-5 h-5" />}>
+                <div className="space-y-6 print:space-y-2">
+                  {EDUCATION.map((edu, idx) => (
+                    <div key={idx} className="group print:break-inside-avoid">
+                      <h3 className="text-stone-800 font-medium group-hover:text-stone-500 transition-colors print:text-black print:text-sm print:font-bold">{edu.degree}</h3>
+                      <div className="text-sm text-stone-500 mt-1 flex justify-between items-center font-mono print:text-stone-800 print:text-xs print:mt-0">
+                        <span>{edu.institution}</span>
+                        <span>{edu.period}</span>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </Section>
+                  ))}
+                </div>
+              </Section>
 
-            {/* Filmography */}
-            <Section title="Filmografia" icon={<Clapperboard className="w-5 h-5" />}>
-              <div className="space-y-4 print:space-y-2">
-                {FILMOGRAPHY.map((film, idx) => (
-                  <div key={idx} className="flex items-start justify-between border-b border-stone-200 pb-2 last:border-0 print:break-inside-avoid print:border-stone-300 print:pb-1">
-                    <div>
-                      <h4 className="text-stone-800 font-medium text-sm print:text-black print:text-xs print:font-bold">{film.title}</h4>
-                      <p className="text-stone-500 text-xs mt-0.5 print:text-stone-700 print:text-[10px] print:mt-0">{film.role}</p>
+              {/* Filmography */}
+              <Section title="Filmografia" icon={<Clapperboard className="w-5 h-5" />}>
+                <div className="space-y-4 print:space-y-2">
+                  {FILMOGRAPHY.map((film, idx) => (
+                    <div key={idx} className="flex items-start justify-between border-b border-stone-200 pb-2 last:border-0 print:break-inside-avoid print:border-stone-300 print:pb-1">
+                      <div>
+                        <h4 className="text-stone-800 font-medium text-sm print:text-black print:text-xs print:font-bold">{film.title}</h4>
+                        <p className="text-stone-500 text-xs mt-0.5 print:text-stone-700 print:text-[10px] print:mt-0">{film.role}</p>
+                      </div>
+                      <div className="text-right">
+                        <span className="block text-stone-400 text-xs font-mono print:text-stone-800 print:text-[10px]">{film.year}</span>
+                        {film.type && <span className="block text-stone-400 text-[10px] uppercase tracking-wide print:text-stone-600 print:text-[9px]">{film.type}</span>}
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <span className="block text-stone-400 text-xs font-mono print:text-stone-800 print:text-[10px]">{film.year}</span>
-                      {film.type && <span className="block text-stone-400 text-[10px] uppercase tracking-wide print:text-stone-600 print:text-[9px]">{film.type}</span>}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Section>
+                  ))}
+                </div>
+              </Section>
+            </div>
 
           </div>
         </div>
