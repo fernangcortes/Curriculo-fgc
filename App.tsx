@@ -7,10 +7,16 @@ import ExperienceCard from './components/ExperienceCard';
 const App: React.FC = () => {
   const [showPrintHint, setShowPrintHint] = useState(false);
 
+  // Debounce print to prevent double dialogs
   const handlePrint = () => {
-    window.print();
+    if (window.matchMedia('print').matches) return; // Don't trigger if already printing
+
+    // Small timeout to prevent immediate re-triggering
+    setTimeout(() => {
+      window.print();
+    }, 100);
+
     // Show a hint because sandboxed environments often block window.print()
-    // This gives the user feedback that the click was received and an alternative way to print.
     setShowPrintHint(true);
     setTimeout(() => setShowPrintHint(false), 4000);
   };
@@ -20,7 +26,7 @@ const App: React.FC = () => {
       {/* Background Grid Pattern - Hidden on Print */}
       <div className="fixed inset-0 pointer-events-none bg-grid opacity-[0.03] z-0 print:hidden"></div>
 
-      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-24 print:py-0 print:px-0 print:max-w-full">
+      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-24 print:py-0 print:px-0 print:max-w-full">
 
         {/* Header Section */}
         <header className="mb-20 print:mb-6">
@@ -66,10 +72,10 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Buttons - Hidden on Print */}
+              {/* Action Buttons */}
               {/* Added z-50 and pointer-events-auto to ensure clickability */}
-              <div className="flex flex-row md:flex-col gap-3 shrink-0 print:hidden mt-4 md:mt-0 relative z-50 pointer-events-auto">
-                <div className="relative">
+              <div className="flex flex-row md:flex-col gap-3 shrink-0 mt-4 md:mt-0 relative z-50 pointer-events-auto print:mt-0 print:block">
+                <div className="relative print:hidden">
                   <button
                     type="button"
                     onClick={(e) => {
@@ -93,7 +99,7 @@ const App: React.FC = () => {
                   href={PERSONAL_INFO.links.linktree}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 md:py-2 bg-white text-stone-800 text-sm font-bold hover:bg-stone-50 border border-stone-200 hover:border-stone-300 transition-all uppercase tracking-wider shadow-sm"
+                  className="flex items-center justify-center gap-2 px-6 py-3 md:py-2 bg-white text-stone-800 text-sm font-bold hover:bg-stone-50 border border-stone-200 hover:border-stone-300 transition-all uppercase tracking-wider shadow-sm print:hidden"
                 >
                   <ExternalLink className="w-4 h-4 text-stone-500" />
                   LinkTree
@@ -102,7 +108,7 @@ const App: React.FC = () => {
                   href={PERSONAL_INFO.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 md:py-2 border border-stone-200 text-stone-600 text-sm font-bold hover:bg-stone-50 hover:text-stone-900 transition-colors uppercase tracking-wider bg-white"
+                  className="flex items-center justify-center gap-2 px-6 py-3 md:py-2 border border-stone-200 text-stone-600 text-sm font-bold hover:bg-stone-50 hover:text-stone-900 transition-colors uppercase tracking-wider bg-white print:hidden"
                 >
                   <Github className="w-4 h-4" />
                   GitHub
