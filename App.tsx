@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Mail, Phone, ExternalLink, Github, Terminal, Camera, Clapperboard, GraduationCap, Cpu, Printer } from 'lucide-react';
 import { PERSONAL_INFO, EXPERIENCE, PROJECTS, FILMOGRAPHY, EDUCATION, SKILLS } from './constants';
 import Section from './components/Section';
@@ -6,14 +6,20 @@ import ExperienceCard from './components/ExperienceCard';
 
 const App: React.FC = () => {
   const [showPrintHint, setShowPrintHint] = useState(false);
+  const isPrinting = useRef(false);
 
   // Debounce print to prevent double dialogs
   const handlePrint = () => {
+    if (isPrinting.current) return;
     if (window.matchMedia('print').matches) return; // Don't trigger if already printing
 
-    // Small timeout to prevent immediate re-triggering
+    isPrinting.current = true;
+
+    // Small timeout to prevent immediate re-triggering and ensure UI updates
     setTimeout(() => {
       window.print();
+      // Unlock after a delay to allow future printing
+      setTimeout(() => { isPrinting.current = false; }, 1000);
     }, 100);
 
     // Show a hint because sandboxed environments often block window.print()
