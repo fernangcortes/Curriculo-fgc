@@ -2,14 +2,14 @@ import { ExperienceItem, Project, FilmEntry, EducationEntry, SkillCategory } fro
 
 export const PERSONAL_INFO = {
   name: "FERNANDO GOMES CÔRTES",
-  roles: ["Técnico de Broadcast", "Desenvolvedor de Soluções Audiovisuais (IA)", "Repórter Cinematográfico"],
+  roles: ["Cineasta", "Técnico de Broadcast", "Desenvolvedor de Soluções Audiovisuais (IA)", "Repórter Cinematográfico"],
   email: "vozesdoasfalto@gmail.com",
   phone: "(62) 98189-9522",
   links: {
     linktree: "https://linktr.ee/Fernangc",
     github: "https://github.com/fernangcortes"
   },
-  summary: "Profissional com trajetória híbrida que une mais de 20 anos de jornalismo na linha de frente (Rio de Janeiro e Goiás) ao desenvolvimento de tecnologias para broadcast. Especialista em captar a história em tempo real — desde o acompanhamento documental de atletas de alto rendimento até crises de segurança pública. Atualmente, lidera a inovação em estúdio na UEG, criando ecossistemas de IA (CapIAu), automação via vMix UTC e aplicativos móveis, democratizando a produção de alto nível."
+  summary: "Profissional com trajetória híbrida que une mais de 20 anos de jornalismo na linha de frente (Rio de Janeiro e Goiás) ao cinema e o desenvolvimento de tecnologias para broadcast. Especialista em captar a história em tempo real — desde o acompanhamento documental de atletas de alto rendimento até crises de segurança pública. Atualmente, lidera a inovação em estúdio na UEG, criando ecossistemas de IA (CapIAu), automação via vMix UTC e aplicativos móveis, democratizando a produção de alto nível."
 };
 
 export const EXPERIENCE: ExperienceItem[] = [
@@ -82,6 +82,30 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const PROJECTS: Project[] = [
   {
+    name: "CapIAu",
+    year: "2026",
+    description: "O CapIAu é uma plataforma completa que gerencia todas as etapas da produção audiovisual: do roteiro à distribuição, da pré-produção à preservação do acervo, tudo potencializado por Inteligência Artificial.",
+    url: "https://cap-i-au-7wr2.vercel.app/"
+  },
+  {
+    name: "CapIAudio",
+    year: "2026",
+    description: "Aplicação avançada de gravação de áudio com criação de marcadores sincronizados para Adobe Premiere e DaVinci Resolve, integrada com serviços Google. Ideal para produtores e editores, agiliza a marcação de trechos importantes, organização de takes e revisão, tornando o fluxo de pós-produção muito mais rápido e preciso. Futuramente será um módulo do CapIAu.",
+    url: "https://github.com/fernangcortes/CapIAudio"
+  },
+  {
+    name: "Ponto Real G0",
+    year: "2026",
+    description: "Uma ferramenta web que automatiza o processo de análise de folhas de frequência (ponto eletrônico) para servidores públicos. O sistema utiliza IA (Google Gemini) para extrair dados de imagens/PDFs da folha de ponto, calcula automaticamente os saldos de horas e gera textos de ocorrência e justificativa prontos para uso no sistema do estado.",
+    url: "https://ponto-real-go.onrender.com"
+  },
+  {
+    name: "eMei Portal",
+    year: "2026",
+    description: "Plataforma completa para Microempreendedores Individuais (MEI), integrando gestão de clientes, serviços e finanças em um único painel. Facilita o controle do dia a dia do negócio, automatiza tarefas repetitivas e oferece visão clara dos resultados, ajudando o MEI a crescer com organização e profissionalismo.",
+    url: "https://emei-portal.vercel.app/"
+  },
+  {
     name: "Teste Dominância Cerebral",
     year: "2026",
     description: "Aplicação interativa para análise de perfil comportamental baseada na teoria dos hemisférios cerebrais.",
@@ -108,10 +132,11 @@ export const PROJECTS: Project[] = [
 ];
 
 export const FILMOGRAPHY: FilmEntry[] = [
-  { title: "Hopekillers: Matadores da Esperança", year: "2021", role: "Técnico de Som" },
-  { title: "Centelha", year: "2009", role: "Assistente de Técnico de Som", type: "Curta" },
-  { title: "Espectro", year: "2008", role: "Som Direto" },
-  { title: "Vide O Galeno", year: "2006", role: "Som Direto", type: "Curta" }
+  { title: "O monstro que reside dentro da casa acima da colina", year: "2026", role: "Assistente de Direção e Making Off - Direção e Montagem", type: "Longa (Em produção)" },
+  { title: "Hopekillers: Matadores da Esperança", year: "2021", role: "Técnico de Som", type: "120 min" },
+  { title: "Centelha", year: "2009", role: "Assistente de Técnico de Som", type: "21 min" },
+  { title: "Espectro", year: "2008", role: "Som Direto", type: "77 min" },
+  { title: "Vide O Galeno", year: "2006", role: "Som Direto", type: "30 min" }
 ];
 
 export const EDUCATION: EducationEntry[] = [
