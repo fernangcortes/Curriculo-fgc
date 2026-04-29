@@ -22,8 +22,10 @@ export interface Project {
 export interface FilmEntry {
   title: string;
   year: string;
-  role: string;
+  role?: string;
   type?: string;
+  url?: string;
+  description?: string;
 }
 
 export interface EducationEntry {
@@ -32,7 +34,20 @@ export interface EducationEntry {
   period: string;
 }
 
+export interface CourseEntry {
+  title: string;
+  institution: string;
+  duration?: string;
+}
+
+export interface Skill {
+  name: string;
+  level?: number;
+  tooltip?: string;
+}
+
 export interface SkillCategory {
   category: string;
-  skills: string[];
+  description?: string;
+  skills: Skill[];
 }
