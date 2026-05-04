@@ -38,6 +38,7 @@ export interface CourseEntry {
   title: string;
   institution: string;
   duration?: string;
+  description?: string;
 }
 
 export interface Skill {
@@ -50,4 +51,16 @@ export interface SkillCategory {
   category: string;
   description?: string;
   skills: Skill[];
+}
+
+export interface ProductionItem {
+  name: string;
+  description: string;
+  role: string;
+  occurrences?: string | number;
+}
+
+export interface ProductionCategory {
+  category: string;
+  items: ProductionItem[];
 }

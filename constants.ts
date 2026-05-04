@@ -1,4 +1,4 @@
-import { ExperienceItem, Project, FilmEntry, EducationEntry, CourseEntry, SkillCategory } from './types';
+import { ExperienceItem, Project, FilmEntry, EducationEntry, CourseEntry, SkillCategory, ProductionCategory } from './types';
 
 export const PERSONAL_INFO = {
   name: "FERNANDO GOMES CÔRTES",
@@ -229,31 +229,36 @@ export const PROJECTS: Project[] = [
 
 export const FILMOGRAPHY: FilmEntry[] = [
   { title: "O monstro que reside dentro da casa acima da colina", year: "2026", role: "Assistente de Direção e Making Off - Direção e Montagem", type: "Longa (Em produção)" },
-  { title: "Hopekillers: Matadores da Esperança", year: "2021", role: "Técnico de Som", type: "120 min" },
+  { title: "Todo poder à imaginação", year: "2021", role: "Direção", type: "Documentário / 17 min", description: "Realização dos canais 'Conhecer & Transformar' e 'Vozes do Asfalto' que retrata o presente vivido no ponto de cultura A Casa de Vidro, em Goiânia, durante a pandemia de covid-19. Utiliza recursos do documentário e da video-reportagem digital para sua mensagem de reXistência.", url: "https://www.youtube.com/watch?v=kVX7EKrSsR4" },
+  { title: "Hopekillers: Matadores da Esperança", year: "2021", role: "Técnico de Som", type: "120 min", description: "Longa-metragem de ação e ficção científica distópica dirigido por Thiago Moyses, onde um grupo busca sobreviver e enfrentar forças opressoras em um futuro desolado." },
   { title: "O Muro (The Wall)", year: "2010", role: "Direção", type: "Curta", description: "O curta questiona se é possível enxergar algo além do muro, com locações nos arredores do Alphaville Flamboyant.", url: "http://www.youtube.com/watch?v=ab4YwdVIU-4" },
   { title: "Nós, João", year: "2010", role: "Diretor de Fotografia", type: "Curta", description: "Acompanha o amanhecer e a rotina de milhões de brasileiros, focando na figura de um cidadão comum.", url: "http://www.youtube.com/watch?v=qAui7fFUw0s" },
   { title: "Pã!", year: "2010", role: "Direção", type: "Curta", description: "Vencedor da mostra competitiva da Internet no 9º SMVC.", url: "http://www.youtube.com/watch?v=7ge1Q-ef-nE" },
-  { title: "Centelha", year: "2009", role: "Assistente de Técnico de Som", type: "21 min" },
-  { title: "Espectro", year: "2008", role: "Som Direto", type: "77 min" },
-  { title: "Vide O Galeno", year: "2006", role: "Som Direto", type: "30 min" }
+  { title: "Augusto, um viciado em games", year: "2009", role: "Direção / Produção", type: "Curta", description: "Curta que aborda de forma cômica e reflexiva como pode ser o cotidiano e a vida de um viciado em video games.", url: "https://vimeo.com/3770609" },
+  { title: "Big Mouse Brasil", year: "2009", role: "Direção / Produção", type: "Série Web", description: "Projeto de humor consistindo em uma paródia de reality show protagonizada por ratos. Produção em múltiplos episódios e teasers.", url: "https://vimeo.com/6674568" },
+  { title: "Centelha", year: "2009", role: "Assistente de Técnico de Som", type: "21 min", description: "Curta-metragem de ficção científica dirigido por Thiago Moyses, caracterizado por sua atmosfera onírica e especulativa." },
+  { title: "Espectro", year: "2008", role: "Som Direto", type: "77 min", description: "Longa-metragem independente dirigido por Thiago Moyses, explorando elementos do thriller psicológico e investigação do subconsciente humano." },
+  { title: "Vide O Galeno", year: "2006", role: "Som Direto", type: "30 min", description: "Documentário/Curta dirigido por Thiago Moyses sobre a vida e a arte, focando em personagens e recortes poéticos da cultura." },
+  { title: "A triste e solitária historia de um corpo", year: "2005", role: "Direção / Produção", type: "Curta / Festival do Minuto", description: "Primeira produção VPPP elaborada para o Festival do Minuto de 2005. Uma experiência audiovisual poética focada em isolamento e linguagem corporal." }
 ];
 
 export const COURSES: CourseEntry[] = [
-  { title: "Comercialização e distribuição para o audiovisual", institution: "Sebrae", duration: "34 horas" },
-  { title: "Vozes: Comunicar é Direito", institution: "Anistia Internacional Brasil", duration: "20 horas" },
-  { title: "Valores Culturais da Natureza", institution: "ENAP", duration: "20 horas" },
-  { title: "Fotografia Institucional", institution: "ENAP", duration: "25 horas" },
-  { title: "Mídias para Educação: produção de vídeos e lives com qualidade", institution: "ENAP", duration: "20 horas" },
-  { title: "Fotografia e Audiovisual para Produção de Janelas de Libras", institution: "ENAP", duration: "20 horas" },
-  { title: "Uso de Mídias Sociais na Comunicação Institucional", institution: "ENAP", duration: "20 horas" },
-  { title: "Comunicação Pública e Comunicação de Governo", institution: "ENAP", duration: "10 horas" },
-  { title: "Storytelling com Dados para Comunicação Profissional de Sucesso", institution: "ENAP", duration: "25 horas" },
-  { title: "Produção de Vídeos: uma introdução", institution: "ENAP", duration: "6 horas" },
-  { title: "Inteligência Artificial para simplificar o dia a dia", institution: "ENAP", duration: "4 horas" },
-  { title: "FICA 2024: Participação como ouvinte", institution: "FICA", duration: "80 horas" },
-  { title: "Merlin Road Show 2022 em Goiânia", institution: "Merlin Video" },
-  { title: "Certificado Ai Videolab 3", institution: "Human Academy" },
-  { title: "cinema mínimo reau", institution: "Certificado Independente" }
+  { title: "Jornada IA (Alura + Governo de Goiás)", institution: "Alura / Governo de Goiás", duration: "26 horas", description: "Programa de capacitação tecnológica realizado em parceria entre a plataforma de ensino Alura e o Governo do Estado de Goiás. Focado em letramento digital, programação e implementação de Inteligência Artificial para inovação no setor público." },
+  { title: "Comercialização e distribuição para o audiovisual", institution: "Sebrae", duration: "34 horas", description: "Capacitação imersiva sobre modelos de negócios, transações de direitos, janelas de exibição em streamings e TV, e estratégias práticas de inserção competitiva de obras audiovisuais no mercado." },
+  { title: "Vozes: Comunicar é Direito", institution: "Anistia Internacional Brasil", duration: "20 horas", description: "Treinamento enfocado no papel da comunicação na defesa dos direitos humanos, cobrindo liberdade de expressão, ativismo digital e construção de narrativas focadas na garantia de direitos sociais." },
+  { title: "Valores Culturais da Natureza", institution: "ENAP", duration: "20 horas", description: "Análise multidisciplinar sobre as intersecções entre o patrimônio cultural humano e a preservação ambiental, subsidiando estratégias governamentais e de comunicação com foco em sustentabilidade." },
+  { title: "Fotografia Institucional", institution: "ENAP", duration: "25 horas", description: "Aperfeiçoamento focado na captação de imagens para comunicação pública, cobrindo técnicas de iluminação e linguagem fotográfica voltadas diretamente ao registro oficial de agendas governamentais." },
+  { title: "Mídias para Educação: produção de vídeos e lives com qualidade", institution: "ENAP", duration: "20 horas", description: "Curso focado em transpor barreiras na transmissão online, englobando softwares de streaming, operação de áudio e vídeo e abordagens metodológicas para ensino e disseminação corporativa." },
+  { title: "Fotografia e Audiovisual para Produção de Janelas de Libras", institution: "ENAP", duration: "20 horas", description: "Dominando especificações técnicas indispensáveis, de enquadramento à iluminação, para integração eficiente de linguagens de sinais (LIBRAS), promovendo a inclusão essencial no audiovisual público." },
+  { title: "Uso de Mídias Sociais na Comunicação Institucional", institution: "ENAP", duration: "20 horas", description: "Mapeamento das particularidades na moderação, engajamento e métrica em plataformas digitais sob a ótica das administrações públicas, otimizando a presença digital do Governo." },
+  { title: "Comunicação Pública e Comunicação de Governo", institution: "ENAP", duration: "10 horas", description: "Debate focado no caráter ético e no formato das comunicações estatais garantindo que a informação seja acessível e efetivamente aproxime cidadãos às esferas de políticas públicas implementadas." },
+  { title: "Storytelling com Dados para Comunicação Profissional de Sucesso", institution: "ENAP", duration: "25 horas", description: "Capacitação sobre a visualização estratégica de informações, combinando narrativas (storytelling) a gráficos e análises com o propósito de apresentar relatórios e dados da forma mais clara e atrativa possível." },
+  { title: "Produção de Vídeos: uma introdução", institution: "ENAP", duration: "6 horas", description: "Módulo básico focando nos rudimentos rápidos da elaboração de roteiros eficientes, captação enxuta de áudio, noções de iluminação de set e princípios fundamentais da montagem não linear de vídeo." },
+  { title: "Inteligência Artificial para simplificar o dia a dia", institution: "ENAP", duration: "4 horas", description: "Noções diretas sobre utilização e prompt design em ferramentas de IA Generativa. Demonstra fluxos operacionais eficientes para auxiliar na aceleração de processos mecânicos diários por meio de tecnologia avançada." },
+  { title: "FICA 2024: Participação como ouvinte", institution: "FICA", duration: "80 horas", description: "Imersão como ouvinte nas palestras e exibições do Festival Internacional, enriquecendo o repertório com tendências estéticas, inovações e abordagens sustentáveis nos modelos de produção de cinema digital." },
+  { title: "Merlin Road Show 2022 em Goiânia", institution: "Merlin Video", description: "Circuito focado nas evoluções em broadcast, incluindo apresentações de equipamentos inovadores de audiovisual (câmeras, fluxos IP/NDI) para otimizar os pipelines de operações ao vivo e gravações locais." },
+  { title: "Certificado Ai Videolab 3", institution: "Human Academy", description: "Formação integral voltada na intersecção entre a captação audiovisual tradicional e automações utilizando modelos de Inteligência Artificial para facilitar todas etapas (transcrições, auto-cortes, correções complexas)." },
+  { title: "cinema mínimo reau", institution: "Certificado Independente", description: "Intervenção imersiva de viés autoral e independente focada nos paradigmas da produção minimalista (do-it-yourself), resolvendo restrições orçamentárias com imensa criatividade cinematográfica de guerrilha." }
 ];
 
 export const EDUCATION: EducationEntry[] = [
@@ -322,6 +327,142 @@ export const SKILLS: SkillCategory[] = [
       { name: "Arquitetura e Banco de Dados", level: 85, tooltip: "Supabase, WebSockets para comunicação em tempo real." },
       { name: "UI/UX", level: 85, tooltip: "Design de interfaces limpas e funcionais para ferramentas de estúdio." },
       { name: "DevOps & Self-Hosting", level: 90, tooltip: "Docker, Jellyfin e Lidarr." }
+    ]
+  }
+];
+
+export const PRODUCTIONS: ProductionCategory[] = [
+  {
+    category: "Programas Institucionais (UEG TV / CriaLab)",
+    items: [
+      {
+        name: "Saberes UEG",
+        description: "Programa de viés acadêmico e educativo focado em entrevistas e debates com especialistas, pesquisadores e docentes. Aborda temas de relevância social, científica e educacional, atuando como uma ponte entre o conhecimento produzido na universidade e a sociedade.",
+        role: "Gravação de episódios, montagem de cenário, operação técnica e edições especiais.",
+        occurrences: 28
+      },
+      {
+        name: "UEG Entrevista",
+        description: "Formato clássico de entrevistas em estúdio que visa dar voz a autoridades, gestores públicos, acadêmicos e personalidades culturais, aprofundando discussões sobre políticas públicas, cultura e gestão.",
+        role: "Captação em estúdio, direção técnica e regravações de áudio/vídeo.",
+        occurrences: 9
+      },
+      {
+        name: "Memórias UEG",
+        description: "Projeto de resgate e preservação do patrimônio histórico e humano da Universidade Estadual de Goiás, consistindo em gravações de depoimentos e documentários que registram a trajetória da instituição e de seus colaboradores.",
+        role: "Gestão de cenário e gravação de entrevistas.",
+        occurrences: 4
+      },
+      {
+        name: "UEG em Sintonia",
+        description: "Programa de rádio e videocast (transmitido pela Rádio UEG Educativa e UEG TV) focado em comunicação dinâmica, notícias universitárias e debates de interesse da comunidade acadêmica.",
+        role: "Testes de novos apresentadores e operação de transmissão.",
+        occurrences: 4
+      },
+      {
+        name: "Sua Saúde",
+        description: "Série audiovisual voltada para a divulgação científica na área da saúde, abordando temas de prevenção, bem-estar e saúde pública com linguagem acessível, gravada em formato de videocast/estúdio.",
+        role: "Gravação de série de episódios informativos.",
+        occurrences: 4
+      }
+    ]
+  },
+  {
+    category: "Eventos Culturais e Festivais",
+    items: [
+      {
+        name: "FICA (Festival Internacional de Cinema e Vídeo Ambiental)",
+        description: "Um dos mais importantes festivais de cinema de temática ambiental do mundo, realizado na Cidade de Goiás. O evento reúne mostras competitivas, debates e oficinas focadas na interseção entre audiovisual e sustentabilidade.",
+        role: "Cobertura de reuniões de balanço, alinhamentos estratégicos e sorteio de bolsas.",
+        occurrences: 4
+      },
+      {
+        name: "Mercado SAPI (8ª e 9ª edições)",
+        description: "Evento de mercado audiovisual focado no Centro-Oeste brasileiro. Reúne produtoras, distribuidoras, canais de TV e streamings para rodadas de negócios, painéis sobre o futuro do cinema e fomento à coprodução nacional e internacional.",
+        role: "Transmissões remotas, logística de montagem e desmontagem de equipamentos no HUB Goiás.",
+        occurrences: 11
+      },
+      {
+        name: "13ª SAU (Semana de Cinema e Audiovisual da UEG)",
+        description: "Evento acadêmico e cultural organizado pelo curso de Cinema e Audiovisual da UEG Laranjeiras. Promove exibições de filmes, debates com realizadores, oficinas técnicas e reflexões sobre a linguagem cinematográfica.",
+        role: "Transmissão de painéis e debates acadêmicos.",
+        occurrences: 3
+      },
+      {
+        name: "Tenda Multiétnica",
+        description: "Espaço de encontro, debate e apresentações culturais, dedicado à valorização das culturas indígenas, quilombolas e tradicionais por meio de rodas de conversa e apresentações.",
+        role: "Transmissão ao vivo de conferências e rodas de conversa.",
+        occurrences: 4
+      }
+    ]
+  },
+  {
+    category: "Projetos Governamentais e de Inovação",
+    items: [
+      {
+        name: "Goiás Tec (Comunidade Kalunga e Festas Típicas)",
+        description: "Política pública da Secretaria de Educação de Goiás (Seduc-GO) que leva o ensino médio a regiões de difícil acesso por meio de transmissões via satélite e conteúdos audiovisuais.",
+        role: "Cobertura externa, gravação de episódios e captação de projetos especiais.",
+        occurrences: 8
+      },
+      {
+        name: "PequiConecta",
+        description: "Evento ou iniciativa de inovação, tecnologia e networking, geralmente sediado no HUB Goiás, voltado para a conexão entre estudantes, startups, gestão pública e o ecossistema de empreendedorismo do estado.",
+        role: "Ensaios de câmera, montagem estrutural e transmissão oficial.",
+        occurrences: 4
+      }
+    ]
+  },
+  {
+    category: "Congressos, Conselhos e Seminários Acadêmicos",
+    items: [
+      {
+        name: "Conselho Universitário (CsU)",
+        description: "Órgão máximo deliberativo e consultivo da universidade. As transmissões plenárias garantem a transparência das decisões institucionais, políticas educacionais e administrativas da UEG.",
+        role: "Transmissão oficial das sessões plenárias matutinas e vespertinas.",
+        occurrences: 2
+      },
+      {
+        name: "XI EDIPE (Encontro Estadual de Didática e Práticas de Ensino)",
+        description: "Importante congresso da área da educação (realizado na PUC Goiás) que reúne professores e pesquisadores para debater os rumos da didática, formação docente e inclusão no ambiente escolar.",
+        role: "Visitas técnicas prévias, montagem de estrutura e transmissão final.",
+        occurrences: 3
+      },
+      {
+        name: "Eventos Acadêmicos (CELT e V Ciclo de Estudos)",
+        description: "Eventos acadêmicos multidisciplinares focados nas transformações do ensino a partir das novas tecnologias e das múltiplas linguagens.",
+        role: "Transmissões remotas de congressos e simpósios temáticos.",
+        occurrences: 4
+      },
+      {
+        name: "Cursos de Extensão (PPG Educação)",
+        description: "Transmissões de ciclos de estudos e seminários internacionais, voltados para a formação continuada, interiorização e internacionalização da pesquisa em educação.",
+        role: "Transmissões remotas e roteamento de sinal via StreamYard.",
+        occurrences: 6
+      }
+    ]
+  },
+  {
+    category: "Projetos Especiais e Logística de Estúdio",
+    items: [
+      {
+        name: "Gravações e Coberturas Externas Singulares",
+        description: "Registro de palestras, campanhas (ex: 20 de Novembro), posses e eventos de integração (Calouradas, SIP, Viva Ciência).",
+        role: "Captação de palestras, operação técnica, direção e cobertura fotográfica.",
+        occurrences: 14
+      },
+      {
+        name: "Transmissões e Lives Especiais",
+        description: "Cobertura de eventos diversos como Evento CEAR, III Colóquio Nac. de Geografia, PIBID, Audiência Pública, MERCADO NO LANTERNA, entre outros.",
+        role: "Transmissão de eventos institucionais e coberturas ao vivo.",
+        occurrences: 10
+      },
+      {
+        name: "Logística, Inovação e Testes",
+        description: "Gestão de acervo de estúdio, pesquisa de tecnologias para acessibilidade (SBTVD) e estruturação metodológica do laboratório.",
+        role: "Coordenação logística, tombamento e integração de novos sistemas (vMix UTC, Teleprompter com IA).",
+        occurrences: "Múltiplas"
+      }
     ]
   }
 ];

@@ -4,6 +4,7 @@ import { PERSONAL_INFO, EXPERIENCE, PROJECTS, FILMOGRAPHY, EDUCATION, SKILLS, CO
 import Section from './components/Section';
 import ExperienceCard from './components/ExperienceCard';
 import SkillsChart from './components/SkillsChart';
+import ProductionsTabs from './components/ProductionsTabs';
 
 const App: React.FC = () => {
   const [showPrintHint, setShowPrintHint] = useState(false);
@@ -154,6 +155,16 @@ const App: React.FC = () => {
                   <ExperienceCard key={item.id} data={item} />
                 ))}
               </div>
+              
+              <div className="mt-12 mb-4 print:mt-6 print:break-inside-avoid">
+                <h3 className="text-base font-bold tracking-tight text-stone-900 border-b border-stone-200 pb-2 mb-2">
+                  Detalhamento de Produções e Eventos
+                </h3>
+                <p className="text-sm text-stone-500 mb-6 print:text-black">
+                  Visão estruturada dos principais programas institucionais, festivais e projetos de inovação dirigidos e operados tecnicamente.
+                </p>
+                <ProductionsTabs />
+              </div>
             </Section>
 
             {/* Projects */}
@@ -232,14 +243,17 @@ const App: React.FC = () => {
 
             {/* Courses / Certifications */}
             <Section title="Cursos e Certificações" icon={<BookOpen className="w-5 h-5" />}>
-              <div className="space-y-4 print:space-y-2">
+              <div className="space-y-6 print:space-y-4">
                 {COURSES.map((course, idx) => (
                   <div key={idx} className="group print:break-inside-avoid">
                     <h3 className="text-stone-800 font-medium text-sm group-hover:text-stone-500 transition-colors print:text-black">{course.title}</h3>
-                    <div className="text-xs text-stone-500 mt-0.5 flex justify-between items-center font-mono print:text-stone-800">
+                    <div className="text-xs text-stone-500 mt-1 mb-2 flex justify-between items-center font-mono print:text-stone-800">
                       <span>{course.institution}</span>
                       {course.duration && <span>{course.duration}</span>}
                     </div>
+                    {course.description && (
+                      <p className="text-xs text-stone-500 flex-grow leading-relaxed print:text-black">{course.description}</p>
+                    )}
                   </div>
                 ))}
               </div>

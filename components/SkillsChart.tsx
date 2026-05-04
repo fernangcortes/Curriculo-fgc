@@ -2,23 +2,61 @@ import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 const data = [
-  { subject: 'Broadcast', A: 95 },
-  { subject: 'Cinegrafia', A: 95 },
-  { subject: 'Fotografia', A: 90 },
-  { subject: 'IA & Automação', A: 90 },
-  { subject: 'Produção', A: 85 },
-  { subject: 'Pós-Produção', A: 85 },
-  { subject: 'Som & Áudio', A: 80 },
-  { subject: 'Design Visual', A: 60 },
-  { subject: 'Desenvolvimento', A: 40 },
+  { 
+    subject: 'Broadcast', 
+    A: 95, 
+    description: 'Expertise em engenharia de transmissão, fluxos NDI/IP e operação de switchers complexos para TV e streaming.' 
+  },
+  { 
+    subject: 'Cinegrafia', 
+    A: 95, 
+    description: 'Operação de câmeras de cinema e broadcast (Sony, Blackmagic) com foco em narrativa visual e movimento.' 
+  },
+  { 
+    subject: 'Fotografia', 
+    A: 90, 
+    description: 'Domínio de iluminação, composição estética e tratamento de imagem para projetos institucionais e autorais.' 
+  },
+  { 
+    subject: 'IA & Automação', 
+    A: 90, 
+    description: 'Implementação de ferramentas de IA generativa e automação de hardware (Bitfocus) para otimização de estúdios.' 
+  },
+  { 
+    subject: 'Produção', 
+    A: 85, 
+    description: 'Gestão de set, assistência de direção e planejamento logístico para eventos e obras audiovisuais.' 
+  },
+  { 
+    subject: 'Pós-Produção', 
+    A: 85, 
+    description: 'Edição não-linear, correção de cor e finalização técnica de projetos documentais e de ficção.' 
+  },
+  { 
+    subject: 'Som & Áudio', 
+    A: 80, 
+    description: 'Operação de som direto, mixagem técnica e rádio-transmissão com foco em clareza informativa.' 
+  },
+  { 
+    subject: 'Design Visual', 
+    A: 60, 
+    description: 'Criação de identidades visuais básicas, motion graphics leves e layouts funcionais para ferramentas digitais.' 
+  },
+  { 
+    subject: 'Desenvolvimento', 
+    A: 40, 
+    description: 'Iniciação em tecnologias web (React, TS) para desenvolvimento de ferramentas de suporte audiovisual.' 
+  },
 ].sort((a, b) => b.A - a.A);
 
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-stone-900 text-white text-[10px] p-2 rounded shadow-lg font-mono">
-        <p className="font-bold">{payload[0].payload.subject}</p>
-        <p className="text-stone-300">Proficiência: {payload[0].value}%</p>
+      <div className="bg-stone-900 text-white text-[10px] p-2.5 rounded shadow-xl font-mono max-w-[200px]">
+        <p className="font-bold underline mb-1">{payload[0].payload.subject}</p>
+        <p className="text-stone-300 leading-tight italic">
+          {payload[0].payload.description}
+        </p>
       </div>
     );
   }
