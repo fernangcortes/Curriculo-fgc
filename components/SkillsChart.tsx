@@ -68,11 +68,12 @@ const SkillsChart: React.FC = () => {
     <div className="w-full mb-10 bg-stone-50 border border-stone-200 p-4 md:p-6 shadow-sm print:hidden group">
       <h4 className="text-[10px] uppercase tracking-widest text-stone-400 font-mono text-center mb-6 group-hover:text-stone-500 transition-colors">Mapa de Proficiência</h4>
       <div className="h-[320px] w-full">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="100%" className="focus:outline-none" style={{ outline: 'none' }}>
           <BarChart 
             data={data} 
             layout="vertical" 
             margin={{ top: 0, right: 30, left: 40, bottom: 0 }}
+            style={{ outline: 'none' }}
           >
             <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#e7e5e4" />
             <XAxis type="number" domain={[0, 100]} hide />
