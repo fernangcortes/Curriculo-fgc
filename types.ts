@@ -14,11 +14,17 @@ export interface HighlightSection {
   items: string[];
 }
 
-export interface Project {
+export interface ProjectEntry {
   name: string;
-  year: string;
+  year?: string;
   description: string;
   url?: string;
+  badges?: string[];
+}
+
+export interface ProjectGroup {
+  category: string;
+  projects: ProjectEntry[];
 }
 
 export interface FilmEntry {
