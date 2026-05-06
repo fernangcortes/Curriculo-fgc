@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, ExternalLink, Github, Terminal, Camera, Clapperboard, GraduationCap, Cpu, Printer, BookOpen } from 'lucide-react';
+import { Mail, Phone, ExternalLink, Github, Terminal, Camera, Clapperboard, GraduationCap, Cpu, Printer, BookOpen, Award } from 'lucide-react';
 import { PERSONAL_INFO, EXPERIENCE, PROJECTS, FILMOGRAPHY, EDUCATION, SKILLS, COURSES } from './constants';
 import Section from './components/Section';
 import ExperienceCard from './components/ExperienceCard';
@@ -118,6 +118,23 @@ const App: React.FC = () => {
                     GitHub
                   </div>
                 </div>
+
+                {PERSONAL_INFO.links.certificates && (
+                  <div className="relative group">
+                    <a 
+                      href={PERSONAL_INFO.links.certificates} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 flex items-center justify-center border border-stone-200 text-stone-600 hover:bg-stone-50 hover:text-stone-900 transition-colors bg-white shadow-sm rounded"
+                      aria-label="Certificados"
+                    >
+                      <Award className="w-5 h-5" />
+                    </a>
+                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-stone-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap pointer-events-none">
+                      Certificados
+                    </div>
+                  </div>
+                )}
               </div>
               
               {/* Links for Print Version Only - Clickable */}
@@ -129,6 +146,11 @@ const App: React.FC = () => {
                    <a href={PERSONAL_INFO.links.linktree} className="flex items-center gap-2 text-stone-900 no-underline">
                      <span className="font-bold">LinkTree:</span> {PERSONAL_INFO.links.linktree}
                    </a>
+                   {PERSONAL_INFO.links.certificates && (
+                     <a href={PERSONAL_INFO.links.certificates} className="flex items-center gap-2 text-stone-900 no-underline">
+                       <span className="font-bold">Certificados:</span> {PERSONAL_INFO.links.certificates}
+                     </a>
+                   )}
                  </div>
               </div>
 
@@ -176,7 +198,7 @@ const App: React.FC = () => {
                     href={project.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group bg-white border border-stone-200 p-6 hover:border-stone-400 hover:shadow-md transition-all duration-300 block print:border-stone-300 print:shadow-none print:p-4 print:break-inside-avoid text-decoration-none"
+                    className="group bg-white border border-stone-200 p-6 hover:border-stone-400 hover:shadow-md transition-all duration-300 block print:border-stone-300 print:shadow-none print:p-4 print:break-inside-avoid no-underline"
                   >
                     <div className="flex justify-between items-start mb-3">
                       <h3 className="text-stone-900 font-bold group-hover:text-stone-600 transition-colors print:text-black">{project.name}</h3>
@@ -231,7 +253,14 @@ const App: React.FC = () => {
               <div className="space-y-6 print:space-y-4">
                 {EDUCATION.map((edu, idx) => (
                   <div key={idx} className="group print:break-inside-avoid">
-                    <h3 className="text-stone-800 font-medium group-hover:text-stone-500 transition-colors print:text-black">{edu.degree}</h3>
+                    {edu.url ? (
+                      <a href={edu.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-stone-800 font-medium hover:text-stone-500 transition-colors cursor-pointer no-underline print:text-black">
+                        {edu.degree}
+                        <ExternalLink className="w-4 h-4 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity print:hidden" />
+                      </a>
+                    ) : (
+                      <h3 className="text-stone-800 font-medium group-hover:text-stone-500 transition-colors print:text-black">{edu.degree}</h3>
+                    )}
                     <div className="text-sm text-stone-500 mt-1 flex justify-between items-center font-mono print:text-stone-800">
                       <span>{edu.institution}</span>
                       <span>{edu.period}</span>
@@ -243,10 +272,28 @@ const App: React.FC = () => {
 
             {/* Courses / Certifications */}
             <Section title="Cursos e Certificações" icon={<BookOpen className="w-5 h-5" />}>
+              <div className="mb-6 print:hidden">
+                <a 
+                  href={PERSONAL_INFO.links.certificates}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-mono text-stone-600 bg-white border border-stone-200 px-3 py-1.5 rounded-full hover:bg-stone-50 hover:text-stone-900 transition-colors shadow-sm"
+                >
+                  <Award className="w-3.5 h-3.5" />
+                  Acessar pasta de Certificados no Drive
+                </a>
+              </div>
               <div className="space-y-6 print:space-y-4">
                 {COURSES.map((course, idx) => (
                   <div key={idx} className="group print:break-inside-avoid">
-                    <h3 className="text-stone-800 font-medium text-sm group-hover:text-stone-500 transition-colors print:text-black">{course.title}</h3>
+                    {course.url ? (
+                      <a href={course.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-stone-800 font-medium text-sm hover:text-stone-500 transition-colors cursor-pointer print:text-black">
+                        {course.title}
+                        <ExternalLink className="w-3 h-3 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity print:hidden" />
+                      </a>
+                    ) : (
+                      <h3 className="text-stone-800 font-medium text-sm hover:text-stone-500 transition-colors print:text-black">{course.title}</h3>
+                    )}
                     <div className="text-xs text-stone-500 mt-1 mb-2 flex justify-between items-center font-mono print:text-stone-800">
                       <span>{course.institution}</span>
                       {course.duration && <span>{course.duration}</span>}

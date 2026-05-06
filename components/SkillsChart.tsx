@@ -67,13 +67,38 @@ const SkillsChart: React.FC = () => {
   return (
     <div className="w-full mb-10 bg-stone-50 border border-stone-200 p-4 md:p-6 shadow-sm print:hidden group">
       <h4 className="text-[10px] uppercase tracking-widest text-stone-400 font-mono text-center mb-6 group-hover:text-stone-500 transition-colors">Mapa de Proficiência</h4>
+      <style>
+        {`
+          .recharts-wrapper, 
+          .recharts-wrapper *, 
+          .recharts-surface, 
+          .recharts-bar-rectangle,
+          .recharts-active-bar,
+          .recharts-tooltip-cursor,
+          .recharts-layer {
+            outline: none !important;
+            box-shadow: none !important;
+          }
+          .recharts-wrapper:focus, 
+          .recharts-wrapper *:focus,
+          .recharts-wrapper:active,
+          .recharts-surface:focus-visible {
+            outline: none !important;
+          }
+          .recharts-wrapper {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
+          }
+        `}
+      </style>
       <div className="h-[320px] w-full">
-        <ResponsiveContainer width="100%" height="100%" className="focus:outline-none" style={{ outline: 'none' }}>
+        <ResponsiveContainer width="100%" height="100%" className="focus:outline-none" style={{ outline: 'none', userSelect: 'none' }}>
           <BarChart 
             data={data} 
             layout="vertical" 
             margin={{ top: 0, right: 30, left: 40, bottom: 0 }}
-            style={{ outline: 'none' }}
+            style={{ outline: 'none', userSelect: 'none' }}
           >
             <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#e7e5e4" />
             <XAxis type="number" domain={[0, 100]} hide />
@@ -85,8 +110,8 @@ const SkillsChart: React.FC = () => {
               tick={{ fill: '#57534e', fontSize: 11, fontFamily: 'monospace', fontWeight: 500 }} 
               width={100}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: '#f5f5f4' }} />
-            <Bar dataKey="A" radius={[0, 4, 4, 0]} barSize={12}>
+            <Tooltip content={<CustomTooltip />} cursor={false} />
+            <Bar dataKey="A" radius={[0, 4, 4, 0]} barSize={12} activeBar={false}>
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill="#1c1917" opacity={0.6 + (entry.A / 250)} />
               ))}

@@ -4,6 +4,8 @@ export interface ExperienceItem {
   role: string;
   period: string;
   description?: string;
+  url?: string;
+  links?: { title: string; url: string; }[];
   highlights: HighlightSection[];
 }
 
@@ -32,6 +34,7 @@ export interface EducationEntry {
   degree: string;
   institution: string;
   period: string;
+  url?: string;
 }
 
 export interface CourseEntry {
@@ -39,6 +42,7 @@ export interface CourseEntry {
   institution: string;
   duration?: string;
   description?: string;
+  url?: string;
 }
 
 export interface Skill {
@@ -58,6 +62,7 @@ export interface ProductionItem {
   description: string;
   role: string;
   occurrences?: string | number;
+  url?: string;
 }
 
 export interface ProductionCategory {

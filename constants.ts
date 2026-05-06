@@ -7,7 +7,8 @@ export const PERSONAL_INFO = {
   phone: "(62) 98189-9522",
   links: {
     linktree: "https://linktr.ee/Fernangc",
-    github: "https://github.com/fernangcortes"
+    github: "https://github.com/fernangcortes",
+    certificates: "https://drive.google.com/drive/folders/1QG1JC6oy3sa-Bpks6KuZMJ_8W0GvHlle?usp=drive_link"
   },
   summary: "Profissional com trajetória híbrida que une mais de 20 anos de jornalismo na linha de frente (Rio de Janeiro e Goiás) ao cinema e o desenvolvimento de tecnologias para broadcast. Especialista em captar a história em tempo real — desde o acompanhamento documental de atletas de alto rendimento até crises de segurança pública. Atualmente, lidera a inovação em estúdio na UEG, criando ecossistemas de IA (CapIAu), automação via vMix UTC e aplicativos móveis, democratizando a produção de alto nível."
 };
@@ -18,6 +19,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: "UEG / CriaLab (Universidade Estadual de Goiás)",
     role: "Técnico de Audiovisual e Desenvolvedor",
     period: "Maio/2024 – Atual",
+    url: "https://www.ueg.br/uegtv/",
     highlights: [
       {
         title: "Desenvolvimento de Software e IA",
@@ -42,6 +44,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: "EBC - TV Brasil (Rio de Janeiro)",
     role: "Assistente de Repórter Cinematográfico",
     period: "Agosto/2014 – Dezembro/2018",
+    url: "https://tvbrasil.ebc.com.br/",
     highlights: [
       {
         items: [
@@ -57,6 +60,11 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: "TBC - TV Brasil Central (Goiás)",
     role: "Repórter Cinematográfico",
     period: "Setembro/2010 – Agosto/2014",
+    url: "https://www.tvbrasilcentral.com.br/",
+    links: [
+      { title: "YouTube", url: "https://youtube.com/tvbrasilcentral" },
+      { title: "TBC Flix", url: "https://tbcflix.com.br/" }
+    ],
     highlights: [
       {
         title: "⚽ Coberturas Esportivas Históricas",
@@ -230,58 +238,58 @@ export const PROJECTS: Project[] = [
 export const FILMOGRAPHY: FilmEntry[] = [
   { title: "O monstro que reside dentro da casa acima da colina", year: "2026", role: "Assistente de Direção e Making Off - Direção e Montagem", type: "Longa (Em produção)" },
   { title: "Todo poder à imaginação", year: "2021", role: "Direção", type: "Documentário / 17 min", description: "Realização dos canais 'Conhecer & Transformar' e 'Vozes do Asfalto' que retrata o presente vivido no ponto de cultura A Casa de Vidro, em Goiânia, durante a pandemia de covid-19. Utiliza recursos do documentário e da video-reportagem digital para sua mensagem de reXistência.", url: "https://www.youtube.com/watch?v=kVX7EKrSsR4" },
-  { title: "Hopekillers: Matadores da Esperança", year: "2021", role: "Técnico de Som", type: "120 min", description: "Longa-metragem de ação e ficção científica distópica dirigido por Thiago Moyses, onde um grupo busca sobreviver e enfrentar forças opressoras em um futuro desolado." },
+  { title: "Hopekillers: Matadores da Esperança", year: "2021", role: "Técnico de Som", type: "120 min", description: "Longa-metragem de ação e ficção científica distópica dirigido por Thiago Moyses, onde um grupo busca sobreviver e enfrentar forças opressoras em um futuro desolado.", url: "https://www.imdb.com/title/tt3727970/" },
   { title: "O Muro (The Wall)", year: "2010", role: "Direção", type: "Curta", description: "O curta questiona se é possível enxergar algo além do muro, com locações nos arredores do Alphaville Flamboyant.", url: "http://www.youtube.com/watch?v=ab4YwdVIU-4" },
   { title: "Nós, João", year: "2010", role: "Diretor de Fotografia", type: "Curta", description: "Acompanha o amanhecer e a rotina de milhões de brasileiros, focando na figura de um cidadão comum.", url: "http://www.youtube.com/watch?v=qAui7fFUw0s" },
   { title: "Pã!", year: "2010", role: "Direção", type: "Curta", description: "Vencedor da mostra competitiva da Internet no 9º SMVC.", url: "http://www.youtube.com/watch?v=7ge1Q-ef-nE" },
   { title: "Augusto, um viciado em games", year: "2009", role: "Direção / Produção", type: "Curta", description: "Curta que aborda de forma cômica e reflexiva como pode ser o cotidiano e a vida de um viciado em video games.", url: "https://vimeo.com/3770609" },
   { title: "Big Mouse Brasil", year: "2009", role: "Direção / Produção", type: "Série Web", description: "Projeto de humor consistindo em uma paródia de reality show protagonizada por ratos. Produção em múltiplos episódios e teasers.", url: "https://vimeo.com/6674568" },
-  { title: "Centelha", year: "2009", role: "Assistente de Técnico de Som", type: "21 min", description: "Curta-metragem de ficção científica dirigido por Thiago Moyses, caracterizado por sua atmosfera onírica e especulativa." },
-  { title: "Espectro", year: "2008", role: "Som Direto", type: "77 min", description: "Longa-metragem independente dirigido por Thiago Moyses, explorando elementos do thriller psicológico e investigação do subconsciente humano." },
-  { title: "Vide O Galeno", year: "2006", role: "Som Direto", type: "30 min", description: "Documentário/Curta dirigido por Thiago Moyses sobre a vida e a arte, focando em personagens e recortes poéticos da cultura." },
+  { title: "Centelha", year: "2009", role: "Assistente de Técnico de Som", type: "21 min", description: "Curta-metragem de ficção científica dirigido por Thiago Moyses, caracterizado por sua atmosfera onírica e especulativa.", url: "https://www.imdb.com/title/tt4493536/" },
+  { title: "Espectro", year: "2008", role: "Som Direto", type: "77 min", description: "Longa-metragem independente dirigido por Thiago Moyses, explorando elementos do thriller psicológico e investigação do subconsciente humano.", url: "https://www.imdb.com/title/tt3736820/" },
+  { title: "Vide O Galeno", year: "2006", role: "Som Direto", type: "30 min", description: "Documentário/Curta dirigido por Thiago Moyses sobre a vida e a arte, focando em personagens e recortes poéticos da cultura.", url: "https://www.imdb.com/title/tt3736788/" },
   { title: "A triste e solitária historia de um corpo", year: "2005", role: "Direção / Produção", type: "Curta / Festival do Minuto", description: "Primeira produção VPPP elaborada para o Festival do Minuto de 2005. Uma experiência audiovisual poética focada em isolamento e linguagem corporal." }
 ];
 
 export const COURSES: CourseEntry[] = [
-  { title: "AI VideoLab 3", institution: "Time Human Academy", description: "Curso prático e intensivo focado em experimentação e direção criativa aplicada à Inteligência Artificial." },
-  { title: "Jornada IA (Alura + Governo de Goiás)", institution: "Alura / Governo de Goiás", duration: "26 horas", description: "Formação voltada à aplicação e desenvolvimento em Inteligência Artificial." },
-  { title: "Masterclass Engenharia de Prompt para Pesquisa Acadêmica", institution: "ITS Rio", description: "Focada na elaboração avançada de prompts para otimização e condução de pesquisas através de IA." },
-  { title: "Formação de Operadores de vMix", institution: "vMix Academy", description: "Abrange fundamentos de broadcast, NDI, SRT, Áudio Dante, BitRate, FrameRate e redes." },
-  { title: "Automação de Estúdio e Transmissões Técnicas", institution: "CriaLab / UEG TV", description: "Treinamentos práticos em softwares de automação de fluxos de transmissão e controle de infraestrutura audiovisual." },
-  { title: "Operação de Rádio", institution: "CriaLab / UEG TV", description: "Workshops sobre fluxo de áudio e rotinas técnicas de um estúdio radiofônico." },
-  { title: "Streaming na prática: faça lives profissionais com o OBS", institution: "Escola Itaú Cultural", description: "Operação técnica detalhada do software OBS para transmissões ao vivo." },
-  { title: "Streaming na prática: faça lives profissionais com o Streamlabs Talk Studio", institution: "Escola Itaú Cultural", description: "Foco na ferramenta Streamlabs para viabilizar transmissões e eventos digitais." },
-  { title: "Planejamento de lives e eventos de streaming", institution: "Escola Itaú Cultural", description: "Estruturação, pré-produção e organização de eventos digitais ao vivo." },
-  { title: "Streaming: conceitos e fundamentos", institution: "Escola Itaú Cultural", description: "Base teórica essencial sobre o funcionamento e tecnologias de streaming." },
-  { title: "Constelação das Artes - história da música e sonoridades brasileiras", institution: "Escola Itaú Cultural", description: "Estudo sobre o percurso histórico e cultural da música no Brasil." },
-  { title: "Constelação das artes - cinema brasileiro: fabulações sobre um território em disputa", institution: "Escola Itaú Cultural", description: "Análise da história, narrativas e o contexto social do cinema nacional." },
-  { title: "Comunicação Visual e Narrativa de Dados", institution: "ENAP", description: "Uso de dados para criação de narrativas claras e impacto visual na comunicação." },
-  { title: "Storytelling com Dados para Comunicação Profissional de Sucesso", institution: "ENAP", duration: "25 horas", description: "Capacitação sobre a visualização estratégica de informações, combinando narrativas (storytelling) a gráficos e análises com o propósito de apresentar relatórios e dados da forma mais clara e atrativa possível." },
-  { title: "Inteligência Artificial para simplificar o dia a dia", institution: "ENAP", duration: "4 horas", description: "Introdução e aplicação de modelos de geração de texto (como GPT-3) e imagem em tarefas criativas." },
-  { title: "Fotografia Institucional", institution: "ENAP", duration: "25 horas", description: "Técnicas fotográficas voltadas para comunicação governamental e institucional." },
-  { title: "Fotografia e Audiovisual para Produção de Janelas de Libras", institution: "ENAP", duration: "20 horas", description: "Parâmetros técnicos de captação de imagem e luz para garantir acessibilidade audiovisual." },
-  { title: "Mídias para Educação: produção de vídeos e lives com qualidade", institution: "ENAP", duration: "20 horas", description: "Técnicas de captação e transmissão voltadas ao conteúdo educacional." },
-  { title: "Uso de Mídias Sociais na Comunicação Institucional", institution: "ENAP", duration: "20 horas", description: "Estratégias e gestão de redes sociais para órgãos públicos e corporativos." },
-  { title: "Comunicação Pública e Comunicação de Governo", institution: "ENAP", duration: "10 horas", description: "Princípios fundamentais da comunicação direcionada ao cidadão e transparência." },
-  { title: "Valores Culturais da Natureza", institution: "ENAP", duration: "20 horas", description: "Relação transversal entre cultura, sociedade e a preservação ambiental." },
-  { title: "Jornalismo na pandemia: Cobertura da COVID-19 agora e no futuro", institution: "Knight Center for Journalism / Univ. Texas", description: "Capacitação em jornalismo científico para cobertura segura e precisa da pandemia." },
-  { title: "Cobertura da vacina para COVID-19: O que os jornalistas precisam saber", institution: "Knight Center for Journalism / Univ. Texas", description: "Atualização jornalística focada no funcionamento e na distribuição das vacinas." },
-  { title: "Jornalismo Científico: da pandemia à crise climática, como melhorar a cobertura de ciência", institution: "Knight Center for Journalism / Univ. Texas", description: "Técnicas e abordagens para cobrir temas complexos de ciência e meio ambiente." },
-  { title: "O Marco Jurídico Internacional da Liberdade de Expressão, Acesso à Informação e Proteção de Jornalistas", institution: "Knight Center for Journalism", description: "Aspectos legais para garantia de acesso à informação e proteção da imprensa." },
+  { title: "AI VideoLab 3", institution: "Time Human Academy", description: "Curso prático e intensivo focado em experimentação e direção criativa aplicada à Inteligência Artificial.", url: "https://www.humanacademy.ai/" },
+  { title: "Jornada IA", institution: "Alura / Governo de Goiás", duration: "26 horas", description: "Formação voltada à aplicação e desenvolvimento em Inteligência Artificial.", url: "https://www.alura.com.br/empresas/governo" },
+  { title: "Masterclass Engenharia de Prompt para Pesquisa Acadêmica", institution: "ITS Rio", description: "Focada na elaboração avançada de prompts para otimização e condução de pesquisas através de IA.", url: "https://itsrio.org/" },
+  { title: "Formação de Operadores de vMix", institution: "vMix Academy", description: "Abrange fundamentos de broadcast, NDI, SRT, Áudio Dante, BitRate, FrameRate e redes.", url: "https://main.vmixacademy.com.br/" },
+  { title: "Automação de Estúdio e Transmissões Técnicas", institution: "CriaLab / UEG TV", description: "Treinamentos práticos em softwares de automação de fluxos de transmissão e controle de infraestrutura audiovisual.", url: "https://www.ueg.br/uegtv/" },
+  { title: "Operação de Rádio", institution: "CriaLab / UEG TV", description: "Workshops sobre fluxo de áudio e rotinas técnicas de um estúdio radiofônico.", url: "https://www.ueg.br/uegtv/" },
+  { title: "Streaming na prática: faça lives profissionais com o OBS", institution: "Escola Itaú Cultural", description: "Operação técnica detalhada do software OBS para transmissões ao vivo.", url: "https://fundacaoitau.org.br/escola/autoformativos/streaming-na-pratica-faca-lives-profissionais-com-o-obs" },
+  { title: "Streaming na prática: faça lives profissionais com o Streamlabs Talk Studio", institution: "Escola Itaú Cultural", description: "Foco na ferramenta Streamlabs para viabilizar transmissões e eventos digitais.", url: "https://fundacaoitau.org.br/escola/autoformativos/streaming-na-pratica-faca-lives-profissionais-com-o-streamlabs-talk-studio" },
+  { title: "Planejamento de lives e eventos de streaming", institution: "Escola Itaú Cultural", description: "Estruturação, pré-produção e organização de eventos digitais ao vivo.", url: "https://fundacaoitau.org.br/escola/autoformativos/planejamento-de-lives-e-eventos-de-streaming" },
+  { title: "Streaming: conceitos e fundamentos", institution: "Escola Itaú Cultural", description: "Base teórica essencial sobre o funcionamento e tecnologias de streaming.", url: "https://fundacaoitau.org.br/escola/autoformativos/streaming-conceitos-e-fundamentos" },
+  { title: "Constelação das Artes - história da música e sonoridades brasileiras", institution: "Escola Itaú Cultural", description: "Estudo sobre o percurso histórico e cultural da música no Brasil.", url: "https://fundacaoitau.org.br/escola/autoformativos/constelacao-das-artes-historia-da-musica-e-sonoridades-brasileiras" },
+  { title: "Constelação das artes - cinema brasileiro: fabulações sobre um território em disputa", institution: "Escola Itaú Cultural", description: "Análise da história, narrativas e o contexto social do cinema nacional.", url: "https://fundacaoitau.org.br/escola/autoformativos/constelacao-das-artes-cinema-brasileiro-fabulacoes-sobre-um-territorio-em-disputa" },
+  { title: "Comunicação Visual e Narrativa de Dados", institution: "ENAP", description: "Uso de dados para criação de narrativas claras e impacto visual na comunicação.", url: "https://www.escolavirtual.gov.br/" },
+  { title: "Storytelling com Dados para Comunicação Profissional de Sucesso", institution: "ENAP", duration: "25 horas", description: "Capacitação sobre a visualização estratégica de informações, combinando narrativas (storytelling) a gráficos e análises com o propósito de apresentar relatórios e dados da forma mais clara e atrativa possível.", url: "https://www.escolavirtual.gov.br/curso/815" },
+  { title: "Inteligência Artificial para simplificar o dia a dia", institution: "ENAP", duration: "4 horas", description: "Introdução e aplicação de modelos de geração de texto (como GPT-3) e imagem em tarefas criativas.", url: "https://www.escolavirtual.gov.br/curso/861" },
+  { title: "Fotografia Institucional", institution: "ENAP", duration: "25 horas", description: "Técnicas fotográficas voltadas para comunicação governamental e institucional.", url: "https://www.escolavirtual.gov.br/curso/466" },
+  { title: "Fotografia e Audiovisual para Produção de Janelas de Libras", institution: "ENAP", duration: "20 horas", description: "Parâmetros técnicos de captação de imagem e luz para garantir acessibilidade audiovisual.", url: "https://www.escolavirtual.gov.br/curso/769" },
+  { title: "Mídias para Educação: produção de vídeos e lives com qualidade", institution: "ENAP", duration: "20 horas", description: "Técnicas de captação e transmissão voltadas ao conteúdo educacional.", url: "https://www.escolavirtual.gov.br/curso/771" },
+  { title: "Uso de Mídias Sociais na Comunicação Institucional", institution: "ENAP", duration: "20 horas", description: "Estratégias e gestão de redes sociais para órgãos públicos e corporativos.", url: "https://www.escolavirtual.gov.br/curso/445" },
+  { title: "Comunicação Pública e Comunicação de Governo", institution: "ENAP", duration: "10 horas", description: "Princípios fundamentais da comunicação direcionada ao cidadão e transparência.", url: "https://www.escolavirtual.gov.br/curso/488" },
+  { title: "Valores Culturais da Natureza", institution: "ENAP", duration: "20 horas", description: "Relação transversal entre cultura, sociedade e a preservação ambiental.", url: "https://www.escolavirtual.gov.br/curso/909" },
+  { title: "Jornalismo na pandemia: Cobertura da COVID-19 agora e no futuro", institution: "Knight Center for Journalism / Univ. Texas", description: "Capacitação em jornalismo científico para cobertura segura e precisa da pandemia.", url: "https://journalismcourses.org/course/jornalismo-na-pandemia-cobertura-da-covid-19-agora-e-no-futuro/" },
+  { title: "Cobertura da vacina para COVID-19: O que os jornalistas precisam saber", institution: "Knight Center for Journalism / Univ. Texas", description: "Atualização jornalística focada no funcionamento e na distribuição das vacinas.", url: "https://journalismcourses.org/course/cobertura-da-vacina-para-covid-19-o-que-os-jornalistas-precisam-saber/" },
+  { title: "Jornalismo Científico: da pandemia à crise climática, como melhorar a cobertura de ciência", institution: "Knight Center for Journalism / Univ. Texas", description: "Técnicas e abordagens para cobrir temas complexos de ciência e meio ambiente.", url: "https://journalismcourses.org/course/jornalismo-cientifico-da-pandemia-a-crise-climatica-como-melhorar-a-cobertura-de-ciencia/" },
+  { title: "O Marco Jurídico Internacional da Liberdade de Expressão, Acesso à Informação e Proteção de Jornalistas", institution: "Knight Center for Journalism / Desembargador André Gustavo Corrêa de Andrade", description: "Aspectos legais para garantia de acesso à informação e proteção da imprensa.", url: "https://journalismcourses.org/course/o-marco-juridico-internacional-da-liberdade-de-expressao-acesso-a-informacao-e-protecao-de-jornalistas/" },
   { title: "Curso / Oficina de Cinema e Realização Audiovisual", institution: "Dellani Lima", description: "Formação teórica e prática conduzida pelo cineasta Dellani Lima." },
-  { title: "Introdução ao Documentário", institution: "Formação Spcine / Thiago B. Mendonça", description: "Exploração teórica e estética do gênero documental." },
-  { title: "Gestão Empresarial para os Desafios do Mercado Audiovisual", institution: "Sebrae / Objetiva", duration: "34 horas", description: "Comercialização, distribuição, legislação, financiamento e modelos de negócios audiovisuais." },
-  { title: "Vozes: Comunicar é Direito", institution: "Anistia Internacional Brasil", duration: "20 horas", description: "Estratégias de comunicação articuladas com a defesa dos direitos humanos." },
-  { title: "Produção de Vídeos: uma introdução", institution: "ENAP", duration: "6 horas", description: "Módulo básico focando nos rudimentos rápidos da elaboração de roteiros eficientes, captação enxuta de áudio, noções de iluminação de set e princípios fundamentais da montagem não linear de vídeo." },
+  { title: "Introdução ao Documentário", institution: "Formação Spcine / Thiago B. Mendonça", description: "Exploração teórica e estética do gênero documental.", url: "https://spcineplay.com.br/" },
+  { title: "Gestão Empresarial para os Desafios do Mercado Audiovisual", institution: "Sebrae / Objetiva", duration: "34 horas", description: "Comercialização, distribuição, legislação, financiamento e modelos de negócios audiovisuais.", url: "https://sebrae.com.br/sites/PortalSebrae/cursosonline" },
+  { title: "Vozes: Comunicar é Direito", institution: "Anistia Internacional Brasil", duration: "20 horas", description: "Estratégias de comunicação articuladas com a defesa dos direitos humanos.", url: "https://anistia.org.br/curso/vozes-comunicar-e-direito/" },
+  { title: "Produção de Vídeos: uma introdução", institution: "ENAP", duration: "6 horas", description: "Módulo básico focando nos rudimentos rápidos da elaboração de roteiros eficientes, captação enxuta de áudio, noções de iluminação de set e princípios fundamentais da montagem não linear de vídeo.", url: "https://www.escolavirtual.gov.br/curso/844" },
   { title: "FICA 2024: Participação como ouvinte", institution: "FICA", duration: "80 horas", description: "Imersão como ouvinte nas palestras e exibições do Festival Internacional, enriquecendo o repertório com tendências estéticas, inovações e abordagens sustentáveis nos modelos de produção de cinema digital." },
   { title: "Merlin Road Show 2022 em Goiânia", institution: "Merlin Video", description: "Circuito focado nas evoluções em broadcast, incluindo apresentações de equipamentos inovadores de audiovisual (câmeras, fluxos IP/NDI) para otimizar os pipelines de operações ao vivo e gravações locais." },
   { title: "cinema mínimo reau", institution: "Certificado Independente", description: "Intervenção imersiva de viés autoral e independente focada nos paradigmas da produção minimalista (do-it-yourself), resolvendo restrições orçamentárias com imensa criatividade cinematográfica de guerrilha." }
 ];
 
 export const EDUCATION: EducationEntry[] = [
-  { degree: "Graduação em Comunicação Social – Audiovisual", institution: "UnB", period: "2003 – 2008" },
-  { degree: "Jornalismo (4 semestres)", institution: "PUC Goiás", period: "2011 – 2012" },
-  { degree: "Publicidade (5 semestres)", institution: "UnB", period: "2004 – 2006" }
+  { degree: "Graduação em Comunicação Social – Audiovisual", institution: "UnB", period: "2003 – 2008", url: "https://www.unb.br/" },
+  { degree: "Jornalismo (4 semestres)", institution: "PUC Goiás", period: "2011 – 2012", url: "https://www.pucgoias.edu.br/" },
+  { degree: "Publicidade (5 semestres)", institution: "UnB", period: "2004 – 2006", url: "https://www.unb.br/" }
 ];
 
 export const SKILLS: SkillCategory[] = [
@@ -356,31 +364,36 @@ export const PRODUCTIONS: ProductionCategory[] = [
         name: "Saberes UEG",
         description: "Programa de viés acadêmico e educativo focado em entrevistas e debates com especialistas, pesquisadores e docentes. Aborda temas de relevância social, científica e educacional, atuando como uma ponte entre o conhecimento produzido na universidade e a sociedade.",
         role: "Gravação de episódios, montagem de cenário, operação técnica e edições especiais.",
-        occurrences: 28
+        occurrences: 28,
+        url: "https://youtube.com/playlist?list=PLkcaFk7ukgQ1HYAqhhR93s_i4eQ0bm6mg"
       },
       {
         name: "UEG Entrevista",
         description: "Formato clássico de entrevistas em estúdio que visa dar voz a autoridades, gestores públicos, acadêmicos e personalidades culturais, aprofundando discussões sobre políticas públicas, cultura e gestão.",
         role: "Captação em estúdio, direção técnica e regravações de áudio/vídeo.",
-        occurrences: 9
+        occurrences: 9,
+        url: "https://youtube.com/playlist?list=PLkcaFk7ukgQ1V9QVnEXOb8fy0jhptrn7A"
       },
       {
         name: "Memórias UEG",
         description: "Projeto de resgate e preservação do patrimônio histórico e humano da Universidade Estadual de Goiás, consistindo em gravações de depoimentos e documentários que registram a trajetória da instituição e de seus colaboradores.",
         role: "Gestão de cenário e gravação de entrevistas.",
-        occurrences: 4
+        occurrences: 4,
+        url: "https://youtube.com/playlist?list=PLkcaFk7ukgQ1XApKrXBaOqB-PH6VFt2x2"
       },
       {
         name: "UEG em Sintonia",
         description: "Programa de rádio e videocast (transmitido pela Rádio UEG Educativa e UEG TV) focado em comunicação dinâmica, notícias universitárias e debates de interesse da comunidade acadêmica.",
         role: "Testes de novos apresentadores e operação de transmissão.",
-        occurrences: 4
+        occurrences: 4,
+        url: "https://www.youtube.com/@UEGTV/search?query=UEG+em+Sintonia"
       },
       {
         name: "Sua Saúde",
         description: "Série audiovisual voltada para a divulgação científica na área da saúde, abordando temas de prevenção, bem-estar e saúde pública com linguagem acessível, gravada em formato de videocast/estúdio.",
         role: "Gravação de série de episódios informativos.",
-        occurrences: 4
+        occurrences: 4,
+        url: "https://youtube.com/playlist?list=PLkcaFk7ukgQ2znDrU6Z2GSGvEYb7s0N1h"
       }
     ]
   },
@@ -391,13 +404,15 @@ export const PRODUCTIONS: ProductionCategory[] = [
         name: "FICA (Festival Internacional de Cinema e Vídeo Ambiental)",
         description: "Um dos mais importantes festivais de cinema de temática ambiental do mundo, realizado na Cidade de Goiás. O evento reúne mostras competitivas, debates e oficinas focadas na interseção entre audiovisual e sustentabilidade.",
         role: "Cobertura de reuniões de balanço, alinhamentos estratégicos e sorteio de bolsas.",
-        occurrences: 4
+        occurrences: 4,
+        url: "https://fica.go.gov.br/"
       },
       {
         name: "Mercado SAPI (8ª e 9ª edições)",
         description: "Evento de mercado audiovisual focado no Centro-Oeste brasileiro. Reúne produtoras, distribuidoras, canais de TV e streamings para rodadas de negócios, painéis sobre o futuro do cinema e fomento à coprodução nacional e internacional.",
         role: "Transmissões remotas, logística de montagem e desmontagem de equipamentos no HUB Goiás.",
-        occurrences: 11
+        occurrences: 11,
+        url: "https://www.mercadosapi.com/"
       },
       {
         name: "13ª SAU (Semana de Cinema e Audiovisual da UEG)",
@@ -420,7 +435,8 @@ export const PRODUCTIONS: ProductionCategory[] = [
         name: "Goiás Tec (Comunidade Kalunga e Festas Típicas)",
         description: "Política pública da Secretaria de Educação de Goiás (Seduc-GO) que leva o ensino médio a regiões de difícil acesso por meio de transmissões via satélite e conteúdos audiovisuais.",
         role: "Cobertura externa, gravação de episódios e captação de projetos especiais.",
-        occurrences: 8
+        occurrences: 8,
+        url: "https://site.educacao.go.gov.br/goiastec/"
       },
       {
         name: "PequiConecta",

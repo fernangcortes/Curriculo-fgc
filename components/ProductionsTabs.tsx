@@ -43,7 +43,14 @@ const ProductionsTabs: React.FC = () => {
           {PRODUCTIONS[activeTab].items.map((item, idx) => (
             <div key={idx} className="flex flex-col border border-stone-100 p-4 bg-stone-50/50 hover:bg-stone-50 transition-colors shadow-sm">
               <div className="flex items-start justify-between mb-2">
-                <h5 className="font-bold text-stone-900 text-sm">{item.name}</h5>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-bold text-stone-900 text-sm flex items-center hover:text-stone-500 transition-colors no-underline">
+                    {item.name}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 ml-1.5 opacity-50 print:hidden"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                ) : (
+                  <h5 className="font-bold text-stone-900 text-sm">{item.name}</h5>
+                )}
                 {item.occurrences && (
                   <span className="text-[10px] font-mono bg-stone-200 text-stone-700 px-2 py-0.5 whitespace-nowrap ml-2">
                     {item.occurrences === 'Múltiplas' ? 'Múltiplos episódios' : `${item.occurrences} ou + episódios`}
