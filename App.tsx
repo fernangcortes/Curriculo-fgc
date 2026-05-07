@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Mail, Phone, ExternalLink, Github, Terminal, Camera, Clapperboard, GraduationCap, Cpu, Printer, BookOpen, Award, User, Code } from 'lucide-react';
-import { PERSONAL_INFO, EXPERIENCE, PORTFOLIO_GROUPS, FILMOGRAPHY, EDUCATION, SKILLS, COURSES } from './constants';
+import { Search, Mail, Phone, ExternalLink, Github, Terminal, Camera, Clapperboard, GraduationCap, Cpu, Printer, BookOpen, Award, User, Code } from 'lucide-react';
+import { PERSONAL_INFO, MUSIC_VIDEOS, DOCUMENTARIES, EXPERIENCE, PORTFOLIO_GROUPS, FILMOGRAPHY, EDUCATION, SKILLS, COURSES, CINEMA_LONGA, CINEMA_CURTA, JORNALISMO_GRANDE_REPORTAGEM, JORNALISMO_REPORTAGEM, JORNALISMO_SERIE, INSTITUCIONAL, PROGRAMA_TV, TRANSMISSAO_EVENTOS, TRANSMISSAO_SHOWS, TRANSMISSAO_VIDEOAULAS } from './constants';
 import Section from './components/Section';
 import ExperienceCard from './components/ExperienceCard';
 import SkillsChart from './components/SkillsChart';
 import ProductionsTabs from './components/ProductionsTabs';
+import DevOrganizer from './components/DevOrganizer';
+import AudiovisualSection from './components/AudiovisualSection';
 
-type TabId = 'visao-geral' | 'experiencia' | 'laboratorio' | 'formacao';
+type TabId = 'visao-geral' | 'experiencia' | 'audiovisual' | 'laboratorio' | 'formacao' | 'dev';
 
 interface TabDefinition {
   id: TabId;
@@ -17,13 +19,68 @@ interface TabDefinition {
 const TABS: TabDefinition[] = [
   { id: 'visao-geral', label: 'Visão Geral & Skills', icon: <User className="w-4 h-4" /> },
   { id: 'experiencia', label: 'Experiência & Produção', icon: <Camera className="w-4 h-4" /> },
+  { id: 'audiovisual', label: 'Audiovisual (Filmes, Doc & TV)', icon: <Clapperboard className="w-4 h-4" /> },
   { id: 'laboratorio', label: 'Desenv. Web & Laboratório', icon: <Code className="w-4 h-4" /> },
-  { id: 'formacao', label: 'Formação & Filmografia', icon: <GraduationCap className="w-4 h-4" /> },
+  { id: 'formacao', label: 'Formação', icon: <GraduationCap className="w-4 h-4" /> },
+  // { id: 'dev', label: 'Dev Organizer', icon: <Terminal className="w-4 h-4" /> },
 ];
 
+const isMatch = (item: any, query: string): boolean => {
+    if (!query) return true;
+    const q = query.toLowerCase();
+    return JSON.stringify(item).toLowerCase().includes(q);
+};
+
 const App: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [showPrintHint, setShowPrintHint] = useState(false);
   const [activeTab, setActiveTab] = useState<TabId>('visao-geral');
+  const [audiovisualSubTab, setAudiovisualSubTab] = useState('todos');
+  const [audiovisualSortMode, setAudiovisualSortMode] = useState<'all' | 'recent' | 'old' | 'type' | 'role'>('all');
+
+  const filteredExperience = EXPERIENCE.filter(exp => isMatch(exp, searchQuery));
+  const filteredPortfolio = PORTFOLIO_GROUPS.map(g => ({
+      ...g,
+      projects: g.projects.filter(p => isMatch(p, searchQuery))
+  })).filter(g => isMatch(g.category, searchQuery) || g.projects.length > 0);
+  const filteredFilmography = FILMOGRAPHY.filter(f => isMatch(f, searchQuery));
+  const filteredMusicVideos = MUSIC_VIDEOS.filter(f => isMatch(f, searchQuery));
+  const filteredDocumentaries = DOCUMENTARIES.filter(f => isMatch(f, searchQuery));
+  
+  const f_CINEMA_LONGA = CINEMA_LONGA.filter(f => isMatch(f, searchQuery));
+  const f_CINEMA_CURTA = CINEMA_CURTA.filter(f => isMatch(f, searchQuery));
+  const f_JORNALISMO_GRANDE_REPORTAGEM = JORNALISMO_GRANDE_REPORTAGEM.filter(f => isMatch(f, searchQuery));
+  const f_JORNALISMO_REPORTAGEM = JORNALISMO_REPORTAGEM.filter(f => isMatch(f, searchQuery));
+  const f_JORNALISMO_SERIE = JORNALISMO_SERIE.filter(f => isMatch(f, searchQuery));
+  const f_INSTITUCIONAL = INSTITUCIONAL.filter(f => isMatch(f, searchQuery));
+  const f_PROGRAMA_TV = PROGRAMA_TV.filter(f => isMatch(f, searchQuery));
+  const f_TRANSMISSAO_EVENTOS = TRANSMISSAO_EVENTOS.filter(f => isMatch(f, searchQuery));
+  const f_TRANSMISSAO_SHOWS = TRANSMISSAO_SHOWS.filter(f => isMatch(f, searchQuery));
+  const f_TRANSMISSAO_VIDEOAULAS = TRANSMISSAO_VIDEOAULAS.filter(f => isMatch(f, searchQuery));
+
+  const filteredEducation = EDUCATION.filter(e => isMatch(e, searchQuery));
+  const filteredSkills = SKILLS.map(g => ({
+      ...g,
+      skills: g.skills.filter(s => isMatch(s, searchQuery))
+  })).filter(g => isMatch(g.category, searchQuery) || g.skills.length > 0);
+  const filteredCourses = COURSES.filter(c => isMatch(c, searchQuery));
+  
+  const audiovisualHasSearch = 
+    filteredFilmography.length > 0 || 
+    filteredDocumentaries.length > 0 || 
+    filteredMusicVideos.length > 0 ||
+    f_CINEMA_LONGA.length > 0 ||
+    f_CINEMA_CURTA.length > 0 ||
+    f_JORNALISMO_GRANDE_REPORTAGEM.length > 0 ||
+    f_JORNALISMO_REPORTAGEM.length > 0 ||
+    f_JORNALISMO_SERIE.length > 0 ||
+    f_INSTITUCIONAL.length > 0 ||
+    f_PROGRAMA_TV.length > 0 ||
+    f_TRANSMISSAO_EVENTOS.length > 0 ||
+    f_TRANSMISSAO_SHOWS.length > 0 ||
+    f_TRANSMISSAO_VIDEOAULAS.length > 0;
+
+  const hasSearch = searchQuery.trim().length > 0;
 
   const handlePrint = () => {
     window.print();
@@ -98,20 +155,7 @@ const App: React.FC = () => {
                   )}
                 </div>
                 
-                <div className="relative group">
-                  <a 
-                    href={PERSONAL_INFO.links.linktree} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 flex items-center justify-center bg-white text-stone-800 hover:bg-stone-50 border border-stone-200 hover:border-stone-300 transition-all shadow-sm rounded-lg"
-                    aria-label="LinkTree"
-                  >
-                    <ExternalLink className="w-5 h-5 text-stone-600" />
-                  </a>
-                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-stone-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap pointer-events-none">
-                    LinkTree
-                  </div>
-                </div>
+
 
                 <div className="relative group">
                   <a 
@@ -151,9 +195,7 @@ const App: React.FC = () => {
                    <a href={PERSONAL_INFO.links.github} className="flex items-center gap-2 text-stone-900 no-underline">
                      <span className="font-bold">GitHub:</span> {PERSONAL_INFO.links.github}
                    </a>
-                   <a href={PERSONAL_INFO.links.linktree} className="flex items-center gap-2 text-stone-900 no-underline">
-                     <span className="font-bold">LinkTree:</span> {PERSONAL_INFO.links.linktree}
-                   </a>
+
                    {PERSONAL_INFO.links.certificates && (
                      <a href={PERSONAL_INFO.links.certificates} className="flex items-center gap-2 text-stone-900 no-underline">
                        <span className="font-bold">Certificados:</span> {PERSONAL_INFO.links.certificates}
@@ -164,9 +206,37 @@ const App: React.FC = () => {
 
             </div>
           </div>
+          
+          {/* Search Bar */}
+          <div className="mt-8 relative max-w-xl mx-auto print:hidden">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Pesquisar por competência, empresa, projeto..."
+                className="w-full bg-white border border-stone-200 rounded-xl py-3 pl-12 pr-4 text-stone-600 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-sm"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-stone-400 hover:text-stone-600 transition-colors"
+                >
+                  Limpar
+                </button>
+              )}
+            </div>
+            {hasSearch && (
+              <p className="text-xs text-center text-emerald-600 mt-2">
+                Filtrando o currículo completo por "{searchQuery}". As abas foram desativadas temporariamente.
+              </p>
+            )}
+          </div>
         </header>
 
         {/* Tabs Navigation */}
+        {!hasSearch && (
         <div className="mb-10 print:hidden overflow-x-auto pb-4 hide-scrollbar">
           <div className="flex items-center gap-2 md:gap-4 min-w-max border-b border-stone-200 pb-px">
             {TABS.map((tab) => (
@@ -188,28 +258,32 @@ const App: React.FC = () => {
             ))}
           </div>
         </div>
+        )}
 
         {/* Main Content Area */}
         <div className="bg-white p-6 md:p-10 rounded-xl border border-stone-200 shadow-sm print:border-0 print:shadow-none print:bg-transparent print:p-0">
           
           {/* Tab: Visão Geral */}
-          {(activeTab === 'visao-geral' || typeof window === 'undefined') && (
+          {(!hasSearch ? activeTab === 'visao-geral' : (filteredSkills.length > 0 || String(PERSONAL_INFO.summary).toLowerCase().includes(searchQuery.toLowerCase()))) && (
             <div className="space-y-12 animate-in fade-in duration-500 print:block">
               {/* Summary */}
+              {(!hasSearch || String(PERSONAL_INFO.summary).toLowerCase().includes(searchQuery.toLowerCase())) && (
               <div>
                 <p className="text-lg md:text-xl leading-relaxed text-stone-600 font-light border-l-4 border-emerald-500/30 pl-6 italic print:text-base print:text-black">
                   "{PERSONAL_INFO.summary}"
                 </p>
               </div>
+              )}
 
               {/* Skills */}
+              {filteredSkills.length > 0 && (
               <Section title="Competências & Habilidades" icon={<Cpu className="w-5 h-5" />}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 print:block print:space-y-6">
                   <div>
                     <SkillsChart />
                   </div>
                   <div className="space-y-8 print:space-y-4">
-                    {SKILLS.map((cat, idx) => (
+                    {filteredSkills.map((cat, idx) => (
                       <div key={idx} className="print:break-inside-avoid">
                         <h4 className="text-sm font-bold uppercase tracking-widest text-stone-400 mb-2 font-mono print:text-black">{cat.category}</h4>
                         {cat.description && <p className="text-sm text-stone-500 mb-4 leading-relaxed print:text-black">{cat.description}</p>}
@@ -235,19 +309,22 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </Section>
+              )}
+
             </div>
           )}
 
           {/* Tab: Experiência */}
-          {(activeTab === 'experiencia' || typeof window === 'undefined') && (
+          {(!hasSearch ? activeTab === 'experiencia' : filteredExperience.length > 0) && (
             <div className="space-y-12 animate-in fade-in duration-500 print:block">
               <Section title="Experiência Profissional" icon={<Camera className="w-5 h-5" />}>
                 <div className="space-y-6">
-                  {EXPERIENCE.map((item) => (
+                  {filteredExperience.map((item) => (
                     <ExperienceCard key={item.id} data={item} />
                   ))}
                 </div>
                 
+                {!hasSearch && (
                 <div className="mt-16 print:mt-10 print:break-inside-avoid bg-stone-50/50 p-6 rounded-xl border border-stone-100">
                   <h3 className="text-xl font-bold tracking-tight text-stone-900 border-b-2 border-stone-200 pb-3 mb-4">
                     Detalhamento de Produções e Eventos
@@ -257,12 +334,13 @@ const App: React.FC = () => {
                   </p>
                   <ProductionsTabs />
                 </div>
+                )}
               </Section>
             </div>
           )}
 
           {/* Tab: Laboratório */}
-          {(activeTab === 'laboratorio' || typeof window === 'undefined') && (
+          {(!hasSearch ? activeTab === 'laboratorio' : filteredPortfolio.length > 0) && (
             <div className="animate-in fade-in duration-500 print:block">
               <Section title="Desenvolvimento Web & Laboratório" icon={<Terminal className="w-5 h-5" />}>
                 <p className="text-stone-500 mb-10 text-lg leading-relaxed max-w-3xl print:text-black">
@@ -270,7 +348,7 @@ const App: React.FC = () => {
                 </p>
                 
                 <div className="space-y-16 print:space-y-10">
-                  {PORTFOLIO_GROUPS.map((group, gIdx) => (
+                  {filteredPortfolio.map((group, gIdx) => (
                     <div key={gIdx} className="print:break-inside-avoid">
                       <h3 className="text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3">
                         <div className="w-6 h-1 bg-emerald-500 rounded-full"></div>
@@ -328,12 +406,13 @@ const App: React.FC = () => {
           )}
 
           {/* Tab: Formação */}
-          {(activeTab === 'formacao' || typeof window === 'undefined') && (
+          {(!hasSearch ? activeTab === 'formacao' : (filteredEducation.length > 0 || filteredCourses.length > 0)) && (
             <div className="space-y-16 animate-in fade-in duration-500 print:block">
               {/* Education */}
+              {filteredEducation.length > 0 && (
               <Section title="Formação Acadêmica" icon={<GraduationCap className="w-5 h-5" />}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 print:grid-cols-1 print:gap-4">
-                  {EDUCATION.map((edu, idx) => (
+                  {filteredEducation.map((edu, idx) => (
                     <div key={idx} className="group bg-stone-50 border border-stone-100 p-6 rounded-xl relative overflow-hidden print:break-inside-avoid print:bg-transparent print:border-b print:rounded-none">
                       <div className="absolute top-0 left-0 w-1 h-full bg-emerald-400 print:hidden"></div>
                       {edu.url ? (
@@ -352,22 +431,26 @@ const App: React.FC = () => {
                   ))}
                 </div>
               </Section>
+              )}
 
               {/* Courses */}
+              {filteredCourses.length > 0 && (
               <Section title="Cursos e Capacitações" icon={<BookOpen className="w-5 h-5" />}>
-                <div className="mb-8 print:hidden">
-                  <a 
-                    href={PERSONAL_INFO.links.certificates}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-stone-700 bg-stone-100 border border-stone-200 px-4 py-2 rounded-lg hover:bg-stone-200 hover:text-stone-900 transition-colors shadow-sm"
-                  >
-                    <Award className="w-4 h-4" />
-                    Acessar pasta de Certificados
-                  </a>
-                </div>
+                {!hasSearch && (
+                  <div className="mb-8 print:hidden">
+                    <a 
+                      href={PERSONAL_INFO.links.certificates}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-stone-700 bg-stone-100 border border-stone-200 px-4 py-2 rounded-lg hover:bg-stone-200 hover:text-stone-900 transition-colors shadow-sm"
+                    >
+                      <Award className="w-4 h-4" />
+                      Acessar pasta de Certificados
+                    </a>
+                  </div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 print:grid-cols-2 print:gap-4">
-                  {COURSES.map((course, idx) => (
+                  {filteredCourses.map((course, idx) => (
                     <div key={idx} className="group bg-white border border-stone-200 p-5 rounded-xl hover:border-emerald-200 hover:shadow-md transition-all print:shadow-none print:break-inside-avoid">
                       {course.url ? (
                         <a href={course.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start text-stone-900 font-bold hover:text-emerald-700 transition-colors cursor-pointer print:text-black leading-tight mb-2 no-underline">
@@ -395,44 +478,84 @@ const App: React.FC = () => {
                   ))}
                 </div>
               </Section>
-
-              {/* Filmography */}
-              <Section title="Filmografia" icon={<Clapperboard className="w-5 h-5" />}>
-                <div className="space-y-4 print:space-y-2">
-                  {FILMOGRAPHY.map((film, idx) => (
-                    <div key={idx} className="flex flex-col md:flex-row md:items-center bg-stone-50 border border-stone-100 p-4 rounded-xl hover:bg-stone-100/70 transition-colors print:bg-transparent print:border-b print:rounded-none format-print">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3">
-                          {film.url ? (
-                            <a href={film.url} target="_blank" rel="noopener noreferrer" className="text-stone-900 font-bold text-lg hover:text-emerald-700 transition-colors flex items-center gap-1.5 print:text-black no-underline">
-                              {film.title}
-                              <ExternalLink className="w-3.5 h-3.5 print:hidden opacity-50" />
-                            </a>
-                          ) : (
-                            <h4 className="text-stone-900 font-bold text-lg print:text-black">{film.title}</h4>
-                          )}
-                        </div>
-                        {film.description && (
-                          <p className="text-sm text-stone-600 mt-2 leading-relaxed print:text-black">{film.description}</p>
-                        )}
-                      </div>
-                      
-                      <div className="mt-4 md:mt-0 md:ml-6 flex md:flex-col items-center md:items-end justify-between md:justify-center gap-4 md:gap-1 shrink-0">
-                        {film.role && (
-                          <span className="bg-stone-900 text-white text-xs font-bold uppercase tracking-wider px-2 py-1 rounded print:bg-transparent print:text-stone-800 print:border print:border-stone-300">
-                            {film.role}
-                          </span>
-                        )}
-                        <div className="text-right">
-                          <span className="block text-stone-500 text-sm font-mono print:text-stone-800 font-medium">{film.year}</span>
-                          {film.type && <span className="block text-stone-400 text-xs uppercase tracking-wide print:text-stone-600">{film.type}</span>}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Section>
+              )}
             </div>
+          )}
+
+          {/* Tab: Audiovisual */}
+          {(!hasSearch ? activeTab === 'audiovisual' : audiovisualHasSearch) && (
+            <div className="space-y-6 animate-in fade-in duration-500 print:block">
+               {/* Sub-tabs for Audiovisual (only when not searching) */}
+               {!hasSearch && (
+                 <div className="flex flex-col gap-3 mb-10 print:hidden border-b border-stone-200 pb-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      <button onClick={() => setAudiovisualSubTab('todos')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSubTab === 'todos' ? 'bg-stone-800 text-white shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Todos os Trabalhos</button>
+                      <button onClick={() => setAudiovisualSubTab('cinema')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSubTab === 'cinema' ? 'bg-stone-800 text-white shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Cinema</button>
+                      <button onClick={() => setAudiovisualSubTab('jornalismo')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSubTab === 'jornalismo' ? 'bg-stone-800 text-white shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Jornalismo & Docs</button>
+                      <button onClick={() => setAudiovisualSubTab('programa')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSubTab === 'programa' ? 'bg-stone-800 text-white shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Programa de TV</button>
+                      <button onClick={() => setAudiovisualSubTab('institucional')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSubTab === 'institucional' ? 'bg-stone-800 text-white shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Institucional</button>
+                      <button onClick={() => setAudiovisualSubTab('transmissao')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSubTab === 'transmissao' ? 'bg-stone-800 text-white shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Transmissão & Ao Vivo</button>
+                      <button onClick={() => setAudiovisualSubTab('clipes')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSubTab === 'clipes' ? 'bg-stone-800 text-white shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Clipes Musicais</button>
+                    </div>
+                    
+                    <div className="flex flex-wrap items-center gap-1 mt-1">
+                        <span className="text-xs text-stone-400 font-medium mr-2 border-r border-stone-200 pr-3">Ordenar por:</span>
+                        <button onClick={() => setAudiovisualSortMode('all')} className={`px-2.5 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSortMode === 'all' ? 'bg-stone-200 text-stone-900 shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Padrão</button>
+                        <button onClick={() => setAudiovisualSortMode('recent')} className={`px-2.5 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSortMode === 'recent' ? 'bg-stone-200 text-stone-900 shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Mais Recentes</button>
+                        <button onClick={() => setAudiovisualSortMode('old')} className={`px-2.5 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSortMode === 'old' ? 'bg-stone-200 text-stone-900 shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Antigos</button>
+                        <button onClick={() => setAudiovisualSortMode('type')} className={`px-2.5 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSortMode === 'type' ? 'bg-stone-200 text-stone-900 shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Formato</button>
+                        <button onClick={() => setAudiovisualSortMode('role')} className={`px-2.5 py-1 text-xs font-medium rounded-md transition-all ${audiovisualSortMode === 'role' ? 'bg-stone-200 text-stone-900 shadow-sm' : 'bg-transparent text-stone-500 hover:bg-stone-100 hover:text-stone-900'}`}>Função</button>
+                    </div>
+                 </div>
+               )}
+
+               {(hasSearch || audiovisualSubTab === 'todos' || audiovisualSubTab === 'cinema') && (
+                 <>
+                   {f_CINEMA_LONGA.length > 0 && <AudiovisualSection title="Cinema - Longa" items={f_CINEMA_LONGA} sortMode={audiovisualSortMode} />}
+                   {f_CINEMA_CURTA.length > 0 && <AudiovisualSection title="Cinema - Curta" items={f_CINEMA_CURTA} sortMode={audiovisualSortMode} />}
+                   {filteredFilmography.length > 0 && <AudiovisualSection title="Filmografia" items={filteredFilmography} sortMode={audiovisualSortMode} />}
+                 </>
+               )}
+
+               {(hasSearch || audiovisualSubTab === 'todos' || audiovisualSubTab === 'jornalismo') && (
+                 <>
+                   {f_JORNALISMO_GRANDE_REPORTAGEM.length > 0 && <AudiovisualSection title="Jornalismo - Grande Reportagem" items={f_JORNALISMO_GRANDE_REPORTAGEM} sortMode={audiovisualSortMode} />}
+                   {f_JORNALISMO_REPORTAGEM.length > 0 && <AudiovisualSection title="Jornalismo - Reportagem" items={f_JORNALISMO_REPORTAGEM} sortMode={audiovisualSortMode} />}
+                   {f_JORNALISMO_SERIE.length > 0 && <AudiovisualSection title="Jornalismo - Série" items={f_JORNALISMO_SERIE} sortMode={audiovisualSortMode} />}
+                   {filteredDocumentaries.length > 0 && <AudiovisualSection title="Documentários" items={filteredDocumentaries} sortMode={audiovisualSortMode} />}
+                 </>
+               )}
+
+               {(hasSearch || audiovisualSubTab === 'todos' || audiovisualSubTab === 'programa') && (
+                 <>
+                   {f_PROGRAMA_TV.length > 0 && <AudiovisualSection title="Programa de TV" items={f_PROGRAMA_TV} sortMode={audiovisualSortMode} />}
+                 </>
+               )}
+
+               {(hasSearch || audiovisualSubTab === 'todos' || audiovisualSubTab === 'institucional') && (
+                 <>
+                   {f_INSTITUCIONAL.length > 0 && <AudiovisualSection title="Institucional" items={f_INSTITUCIONAL} sortMode={audiovisualSortMode} />}
+                 </>
+               )}
+
+               {(hasSearch || audiovisualSubTab === 'todos' || audiovisualSubTab === 'transmissao') && (
+                 <>
+                   {f_TRANSMISSAO_EVENTOS.length > 0 && <AudiovisualSection title="Transmissão - Eventos" items={f_TRANSMISSAO_EVENTOS} sortMode={audiovisualSortMode} />}
+                   {f_TRANSMISSAO_SHOWS.length > 0 && <AudiovisualSection title="Transmissão - Shows" items={f_TRANSMISSAO_SHOWS} sortMode={audiovisualSortMode} />}
+                   {f_TRANSMISSAO_VIDEOAULAS.length > 0 && <AudiovisualSection title="Transmissão - Videoaulas" items={f_TRANSMISSAO_VIDEOAULAS} sortMode={audiovisualSortMode} />}
+                 </>
+               )}
+               
+               {(hasSearch || audiovisualSubTab === 'todos' || audiovisualSubTab === 'clipes') && (
+                 <>
+                   {filteredMusicVideos.length > 0 && <AudiovisualSection title="Clipes Musicais" items={filteredMusicVideos} sortMode={audiovisualSortMode} />}
+                 </>
+               )}
+            </div>
+          )}
+
+          {activeTab === 'dev' && !hasSearch && (
+             <DevOrganizer />
           )}
 
         </div>

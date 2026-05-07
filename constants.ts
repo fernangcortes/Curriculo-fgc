@@ -6,8 +6,7 @@ export const PERSONAL_INFO = {
   email: "vozesdoasfalto@gmail.com",
   phone: "(62) 98189-9522",
   links: {
-    linktree: "https://linktr.ee/Fernangc",
-    github: "https://github.com/fernangcortes",
+        github: "https://github.com/fernangcortes",
     certificates: "https://drive.google.com/drive/folders/1QG1JC6oy3sa-Bpks6KuZMJ_8W0GvHlle?usp=drive_link"
   },
   summary: "Profissional com trajetória híbrida que une mais de 20 anos de jornalismo na linha de frente (Rio de Janeiro e Goiás) ao cinema e o desenvolvimento de tecnologias para broadcast. Especialista em captar a história em tempo real — desde o acompanhamento documental de atletas de alto rendimento até crises de segurança pública. Atualmente, lidera a inovação em estúdio na UEG, criando ecossistemas de IA (CapIAu), automação via vMix UTC e aplicativos móveis, democratizando a produção de alto nível."
@@ -316,20 +315,367 @@ export const PORTFOLIO_GROUPS: ProjectGroup[] = [
   }
 ];
 
-export const FILMOGRAPHY: FilmEntry[] = [
-  { title: "O monstro que reside dentro da casa acima da colina", year: "2026", role: "Assistente de Direção e Making Off - Direção e Montagem", type: "Longa (Em produção)" },
-  { title: "Todo poder à imaginação", year: "2021", role: "Direção", type: "Documentário / 17 min", description: "Realização dos canais 'Conhecer & Transformar' e 'Vozes do Asfalto' que retrata o presente vivido no ponto de cultura A Casa de Vidro, em Goiânia, durante a pandemia de covid-19. Utiliza recursos do documentário e da video-reportagem digital para sua mensagem de reXistência.", url: "https://www.youtube.com/watch?v=kVX7EKrSsR4" },
-  { title: "Hopekillers: Matadores da Esperança", year: "2021", role: "Técnico de Som", type: "120 min", description: "Longa-metragem de ação e ficção científica distópica dirigido por Thiago Moyses, onde um grupo busca sobreviver e enfrentar forças opressoras em um futuro desolado.", url: "https://www.imdb.com/title/tt3727970/" },
-  { title: "O Muro (The Wall)", year: "2010", role: "Direção", type: "Curta", description: "O curta questiona se é possível enxergar algo além do muro, com locações nos arredores do Alphaville Flamboyant.", url: "http://www.youtube.com/watch?v=ab4YwdVIU-4" },
-  { title: "Nós, João", year: "2010", role: "Diretor de Fotografia", type: "Curta", description: "Acompanha o amanhecer e a rotina de milhões de brasileiros, focando na figura de um cidadão comum.", url: "http://www.youtube.com/watch?v=qAui7fFUw0s" },
-  { title: "Pã!", year: "2010", role: "Direção", type: "Curta", description: "Vencedor da mostra competitiva da Internet no 9º SMVC.", url: "http://www.youtube.com/watch?v=7ge1Q-ef-nE" },
-  { title: "Augusto, um viciado em games", year: "2009", role: "Direção / Produção", type: "Curta", description: "Curta que aborda de forma cômica e reflexiva como pode ser o cotidiano e a vida de um viciado em video games.", url: "https://vimeo.com/3770609" },
-  { title: "Big Mouse Brasil", year: "2009", role: "Direção / Produção", type: "Série Web", description: "Projeto de humor consistindo em uma paródia de reality show protagonizada por ratos. Produção em múltiplos episódios e teasers.", url: "https://vimeo.com/6674568" },
-  { title: "Centelha", year: "2009", role: "Assistente de Técnico de Som", type: "21 min", description: "Curta-metragem de ficção científica dirigido por Thiago Moyses, caracterizado por sua atmosfera onírica e especulativa.", url: "https://www.imdb.com/title/tt4493536/" },
-  { title: "Espectro", year: "2008", role: "Som Direto", type: "77 min", description: "Longa-metragem independente dirigido por Thiago Moyses, explorando elementos do thriller psicológico e investigação do subconsciente humano.", url: "https://www.imdb.com/title/tt3736820/" },
-  { title: "Vide O Galeno", year: "2006", role: "Som Direto", type: "30 min", description: "Documentário/Curta dirigido por Thiago Moyses sobre a vida e a arte, focando em personagens e recortes poéticos da cultura.", url: "https://www.imdb.com/title/tt3736788/" },
-  { title: "A triste e solitária historia de um corpo", year: "2005", role: "Direção / Produção", type: "Curta / Festival do Minuto", description: "Primeira produção VPPP elaborada para o Festival do Minuto de 2005. Uma experiência audiovisual poética focada em isolamento e linguagem corporal." }
+export const FILMOGRAPHY: FilmEntry[] = [];
+
+export const MUSIC_VIDEOS: FilmEntry[] = [
+  {
+    "title": "Dez-de-Queixo-Caído",
+    "year": "2010",
+    "role": "Direção de Fotografia",
+    "description": "Em novembro dia 20, do ano 1959, a ONU nos comove proclamando a Declaração dos Direitos das Crianças.\nEm 2006, um garoto de Brasília - Reginaldo Sandré - visita o Congresso com uma pergunta na cabeça: o que deu errado?\n\nUm videoclipe-ficção-documental.\nDireção, roteiro e produção de Luiz Carlos Tanaka.\nFiz a fotografia dos planos internos.",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=UEaWi5gUeBY"
+  },
+  {
+    "title": "Atlético MG x Fluminense no aeroporto de Brasília",
+    "year": "2010",
+    "role": "Direção e Montagem",
+    "description": "Registro feito de uma cadeira na área de alimentação do aeroporto de Brasília.",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=RNl3VX8dok4"
+  },
+  {
+    "title": "Insetos",
+    "year": "2010",
+    "role": "Direção, Animação e Montagem",
+    "description": "Quem somos nós?\nTeste do plugin Trapcode Sound Keys do Adobe After Affects.",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=v7CVBpsakT8"
+  },
+  {
+    "title": "Que Bonito Seria",
+    "year": "2009",
+    "role": "Direção e Montagem",
+    "description": "Seria o mundo de felicidade.\nMúsica \"Que bom seria\" de Cascatinha e Inhanha.\nEncontrei essa música no álbum \"BRASIL CAIPIRA - Raridades da Terra dos Pinheirais em 78 Rotações - Vol. I\" disponibilizado no site rarissimos.blogspot.com",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=j8w_sJKiSnw"
+  },
+  {
+    "title": "A abelhinha",
+    "year": "2009",
+    "role": "Direção e Montagem",
+    "description": "Música de Renato Fechine - Abelhinha",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=RVJWo8BYI6U"
+  },
+  {
+    "title": "Cozinha Noturna",
+    "year": "2007",
+    "role": "Direção e Montagem",
+    "description": "Curta na madrugada focado em iluminação e fomes noturnas.",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=gnSbg3DcQvo"
+  },
+  {
+    "title": "Mercado das Coisas 42a Edicao - Dia da Maes",
+    "year": "202x",
+    "role": "Direção e Montagem",
+    "description": "",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=sKNlw5S_0PA"
+  },
+  {
+    "title": "Gab de Oliva | Baile da música divertida | Emoriô | João Donato",
+    "year": "202x",
+    "role": "Direção e Montagem",
+    "description": "",
+    "type": "Clipes musicais",
+    "url": "https://www.youtube.com/watch?v=6hZfj7OnePQ"
+  }
 ];
+
+export const DOCUMENTARIES: FilmEntry[] = [];
+
+export const CINEMA_LONGA: FilmEntry[] = [];
+export const CINEMA_CURTA: FilmEntry[] = [
+  {
+    "title": "O monstro que reside dentro da casa acima da colina",
+    "year": "2026",
+    "role": "Assistente de Direção e Making Off - Direção e Montagem",
+    "description": "Dois irmãos se confrontam com o seu passado. Quem é o monstro?",
+    "type": "Curta",
+    "url": ""
+  },
+  {
+    "title": "Todo poder à imaginação",
+    "year": "2021",
+    "role": "Direção, produção e montagem",
+    "description": "Realização dos canais 'Conhecer & Transformar' e 'Vozes do Asfalto' que retrata o presente vivido no ponto de cultura A Casa de Vidro, em Goiânia, durante a pandemia de covid-19. Utiliza recursos do documentário e da video-reportagem digital para sua mensagem de reXistência.",
+    "type": "Curta",
+    "url": "https://www.youtube.com/watch?v=kVX7EKrSsR4"
+  },
+  {
+    "title": "Hopekillers: Matadores da Esperança",
+    "year": "2021",
+    "role": "Técnico de Som",
+    "description": "Longa-metragem de ação e ficção científica distópica dirigido por Thiago Moyses, onde um grupo busca sobreviver e enfrentar forças opressoras em um futuro desolado.",
+    "type": "Curta",
+    "url": "https://www.imdb.com/title/tt3727970/"
+  },
+  {
+    "title": "PiPi",
+    "year": "2010",
+    "role": "Direção e Montagem",
+    "description": "Um barulhinho estranho.\nUma piada safada.",
+    "type": "Curta",
+    "url": "https://www.youtube.com/watch?v=tquAm1mK6BE"
+  },
+  {
+    "title": "O Muro (The Wall)",
+    "year": "2010",
+    "role": "Direção",
+    "description": "O Alphaville Flamboyant, localizado em Goiânia, próximo ao paço municipal, tem 4.180.593,56 m2 de área total. Toda essa área é cercada por muros ou grades. Por acaso vocês conseguem enxergar alguma coisa além do muro?",
+    "type": "Curta",
+    "url": "http://www.youtube.com/watch?v=ab4YwdVIU-4"
+  },
+  {
+    "title": "Nós, João",
+    "year": "2010",
+    "role": "Diretor de Fotografia",
+    "description": "Acompanha o amanhecer e a rotina de milhões de brasileiros, focando na figura de um cidadão comum.",
+    "type": "Curta",
+    "url": "http://www.youtube.com/watch?v=qAui7fFUw0s"
+  },
+  {
+    "title": "Pã!",
+    "year": "2010",
+    "role": "Direção",
+    "description": "Enviar relatório de erros?\nVencedor da mostra competitiva da Internet no 9º SMVC.",
+    "type": "Curta",
+    "url": "http://www.youtube.com/watch?v=7ge1Q-ef-nE"
+  },
+  {
+    "title": "Elevador Aeroporto",
+    "year": "2009",
+    "role": "Direção e Montagem",
+    "description": "Curta capturando a agonia da espera.",
+    "type": "Curta",
+    "url": "https://www.youtube.com/watch?v=ptnjlVZcY4I"
+  },
+  {
+    "title": "Augusto, um viciado em games",
+    "year": "2009",
+    "role": "Direção e Produção",
+    "description": "Curta que aborda de forma cômica e reflexiva como pode ser o cotidiano e a vida de um viciado em video games.",
+    "type": "Curta",
+    "url": "https://vimeo.com/3770609"
+  },
+  {
+    "title": "Big Mouse Brasil",
+    "year": "2009",
+    "role": "Direção / Produção",
+    "description": "Projeto de humor consistindo em uma paródia de reality show protagonizada por ratos. Produção em múltiplos episódios e teasers.",
+    "type": "Curta",
+    "url": "https://vimeo.com/6674568"
+  },
+  {
+    "title": "Centelha",
+    "year": "2009",
+    "role": "Assistente de Técnico de Som",
+    "description": "Curta-metragem de ficção científica dirigido por Thiago Moyses, caracterizado por sua atmosfera onírica e especulativa.",
+    "type": "Curta",
+    "url": "https://www.imdb.com/title/tt4493536/"
+  },
+  {
+    "title": "Marias, Anas e Julias",
+    "year": "2008",
+    "role": "Direção e Montagem",
+    "description": "Documentário / Curta sobre as mulheres da cidade.",
+    "type": "Curta",
+    "url": "https://www.youtube.com/watch?v=NszqVMAAUu4"
+  },
+  {
+    "title": "Espectro",
+    "year": "2008",
+    "role": "Som Direto",
+    "description": "Longa-metragem independente dirigido por Thiago Moyses, explorando elementos do thriller psicológico e investigação do subconsciente humano.",
+    "type": "Curta",
+    "url": "https://www.imdb.com/title/tt3736820/"
+  },
+  {
+    "title": "Vide O Galeno",
+    "year": "2006",
+    "role": "Som Direto",
+    "description": "Documentário/Curta dirigido por Thiago Moyses sobre a vida e a arte, focando em personagens e recortes poéticos da cultura.",
+    "type": "Curta",
+    "url": "https://www.imdb.com/title/tt3736788/"
+  },
+  {
+    "title": "A triste e solitária historia de um corpo",
+    "year": "2005",
+    "role": "Direção, Animação e Produção",
+    "description": "Primeira produção VPPP elaborada para o Festival do Minuto de 2005. Uma experiência audiovisual poética focada em isolamento e linguagem corporal.",
+    "type": "Curta",
+    "url": ""
+  }
+];
+export const JORNALISMO_GRANDE_REPORTAGEM: FilmEntry[] = [
+  {
+    "title": "Caminhos da Reportagem | Chapecoense: a volta por cima",
+    "year": "202x",
+    "role": "Assistente de Cinegrafia",
+    "description": "",
+    "type": "Grande Reportagem",
+    "url": "https://www.youtube.com/watch?v=agEwV90KxNo"
+  },
+  {
+    "title": "Vale do Café: uma viagem no tempo",
+    "year": "202x",
+    "role": "Assistente de Cinegrafia",
+    "description": "",
+    "type": "Grande Reportagem",
+    "url": "https://www.youtube.com/watch?v=Xto0LJWbqj4"
+  }
+];
+export const JORNALISMO_REPORTAGEM: FilmEntry[] = [
+  {
+    "title": "29M - Fora Bolsonaro",
+    "year": "202x",
+    "role": "Direção e Montagem",
+    "description": "",
+    "type": "Reportagem",
+    "url": "https://www.youtube.com/watch?v=8c1dGRbUlWE"
+  },
+  {
+    "title": "Discurso deputada Adriana Accorsi",
+    "year": "202x",
+    "role": "Direção e Montagem",
+    "description": "Fala da deputada e delegada Adriana Accorsi na concentração da passeata e carreata 24J ForaBolsonaro",
+    "type": "Reportagem",
+    "url": "https://www.youtube.com/watch?v=XYBMd04EUaw"
+  }
+];
+export const JORNALISMO_SERIE: FilmEntry[] = [
+  {
+    "title": "20 de Novembro | Malú Moura",
+    "year": "202x",
+    "role": "Cinegrafista",
+    "description": "",
+    "type": "Série",
+    "url": "https://www.youtube.com/watch?v=klQcV-sX5wI"
+  },
+  {
+    "title": "20 de Novembro | Emíliana Pereira dos Santos",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "",
+    "type": "Série",
+    "url": "https://www.youtube.com/watch?v=QsiXj-h4mq8"
+  },
+  {
+    "title": "20 de Novembro | Joaquim Adorno",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "",
+    "type": "Série",
+    "url": "https://www.youtube.com/watch?v=mHHz1y910Lg"
+  },
+  {
+    "title": "20 de Novembro | Juliana Jardel",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "",
+    "type": "Série",
+    "url": "https://www.youtube.com/watch?v=7o7d0NdWFFA"
+  },
+  {
+    "title": "20 de Novembro | Marcelo Marques",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "",
+    "type": "Série",
+    "url": "https://www.youtube.com/watch?v=UxWub5bvVpo"
+  },
+  {
+    "title": "Manifestações Culturais da Comunidade Kalunga | Ep 02 | Goiás Tec",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "",
+    "type": "Série",
+    "url": "https://www.youtube.com/watch?v=zvlIg0oE8v8"
+  },
+  {
+    "title": "Conexão Ambiental | Centro: revitalizar para quem?",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "",
+    "type": "Série",
+    "url": "https://www.youtube.com/watch?v=InCUFtqtknU"
+  }
+];
+export const INSTITUCIONAL: FilmEntry[] = [
+  {
+    "title": "A importância de eliminar os retrabalhos",
+    "year": "202x",
+    "role": "Direção, Produção e Montagem",
+    "description": "",
+    "type": "Institucional",
+    "url": "https://www.youtube.com/watch?v=bs-JyFFF5eA"
+  },
+  {
+    "title": "Outubro é mês de aniversários!",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "",
+    "type": "Institucional",
+    "url": "https://www.youtube.com/watch?v=D_di9OmLe1s"
+  },
+  {
+    "title": "Aniversários da Rádio UEG Educativa e da UEG TV",
+    "year": "202x",
+    "role": "Cinegrafia e Fotografia",
+    "description": "É mês de festa! A UEG TV celebra seus 6 anos e a Rádio UEG Educativa completa 7 anos! Juntas, elas promovem ciência, educação e cultura, conectando e inspirando a comunidade. Parabéns à UEG TV e à Rádio UEG Educativa por tantos anos de dedicação e inovação! Que venham mais histórias e conquistas!",
+    "type": "Institucional",
+    "url": "https://www.youtube.com/watch?v=6aJwaHbcNjU"
+  },
+  {
+    "title": "ASECAD",
+    "year": "202x",
+    "role": "Direção e Montagem",
+    "description": "",
+    "type": "Institucional",
+    "url": "https://www.youtube.com/watch?v=JI84XfvOuMg"
+  }
+];
+export const PROGRAMA_TV: FilmEntry[] = [
+  {
+    "title": "Saberes UEG | Extensão na Universidade e os Objetivos de Desenvolvimento Sustentável",
+    "year": "202x",
+    "role": "DTV e Operador de Streaming",
+    "description": "",
+    "type": "Programa de TV",
+    "url": "https://www.youtube.com/watch?v=QbauqDfoRZQ"
+  }
+];
+export const TRANSMISSAO_EVENTOS: FilmEntry[] = [
+  {
+    "title": "Eleicções UEG 2025 – Entrevista com os candidatos à direção dos I. A. da UEG|Alexandre Garcês - Parte 1",
+    "year": "202x",
+    "role": "DTV e Operador de Streaming",
+    "description": "",
+    "type": "Eventos gerais",
+    "url": "https://www.youtube.com/watch?v=0KUzExrNZc0"
+  },
+  {
+    "title": "3º EECABC | O ofício de roteirista no contexto da inteligência artificial",
+    "year": "202x",
+    "role": "DTV e Operador de Streaming",
+    "description": "",
+    "type": "Eventos gerais",
+    "url": "https://www.youtube.com/watch?v=_p6wafQshbI"
+  },
+  {
+    "title": "Tenda Multiétnica | A proteção do patrimônio cultural dos povos indígenas e comunidades tradicionais",
+    "year": "202x",
+    "role": "DTV e Operador de Streaming",
+    "description": "Conferência de Abertura com FERNANDA KAINGÁNG - Diretora do Museu Nacional dos Povos Indígenas.\nMediação: Marcelo Feijó Charléo",
+    "type": "Eventos gerais",
+    "url": "https://www.youtube.com/watch?v=LmBmabcXZqc"
+  }
+];
+export const TRANSMISSAO_SHOWS: FilmEntry[] = [];
+export const TRANSMISSAO_VIDEOAULAS: FilmEntry[] = [];
+
 
 export const COURSES: CourseEntry[] = [
   { title: "AI VideoLab 3", institution: "Time Human Academy", description: "Curso prático e intensivo focado em experimentação e direção criativa aplicada à Inteligência Artificial.", url: "https://www.humanacademy.ai/" },

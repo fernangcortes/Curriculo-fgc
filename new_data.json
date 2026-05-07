@@ -1,0 +1,744 @@
+{
+  "cinema_longa": [],
+  "cinema_curta": [
+    {
+      "title": "O monstro que reside dentro da casa acima da colina",
+      "year": "2026",
+      "role": "Assistente de Direção e Making Off - Direção e Montagem",
+      "description": "Dois irmãos se confrontam com o seu passado. Quem é o monstro?",
+      "type": "Curta",
+      "url": ""
+    },
+    {
+      "title": "Todo poder à imaginação",
+      "year": "2021",
+      "role": "Direção, produção e montagem",
+      "description": "Realização dos canais 'Conhecer & Transformar' e 'Vozes do Asfalto' que retrata o presente vivido no ponto de cultura A Casa de Vidro, em Goiânia, durante a pandemia de covid-19. Utiliza recursos do documentário e da video-reportagem digital para sua mensagem de reXistência.",
+      "type": "Curta",
+      "url": "https://www.youtube.com/watch?v=kVX7EKrSsR4"
+    },
+    {
+      "title": "Hopekillers: Matadores da Esperança",
+      "year": "2021",
+      "role": "Técnico de Som",
+      "description": "Longa-metragem de ação e ficção científica distópica dirigido por Thiago Moyses, onde um grupo busca sobreviver e enfrentar forças opressoras em um futuro desolado.",
+      "type": "Curta",
+      "url": "https://www.imdb.com/title/tt3727970/"
+    },
+    {
+      "title": "PiPi",
+      "year": "2010",
+      "role": "Direção e Montagem",
+      "description": "Um barulhinho estranho.\nUma piada safada.",
+      "type": "Curta",
+      "url": "https://www.youtube.com/watch?v=tquAm1mK6BE"
+    },
+    {
+      "title": "O Muro (The Wall)",
+      "year": "2010",
+      "role": "Direção",
+      "description": "O Alphaville Flamboyant, localizado em Goiânia, próximo ao paço municipal, tem 4.180.593,56 m2 de área total. Toda essa área é cercada por muros ou grades. Por acaso vocês conseguem enxergar alguma coisa além do muro?",
+      "type": "Curta",
+      "url": "http://www.youtube.com/watch?v=ab4YwdVIU-4"
+    },
+    {
+      "title": "Nós, João",
+      "year": "2010",
+      "role": "Diretor de Fotografia",
+      "description": "Acompanha o amanhecer e a rotina de milhões de brasileiros, focando na figura de um cidadão comum.",
+      "type": "Curta",
+      "url": "http://www.youtube.com/watch?v=qAui7fFUw0s"
+    },
+    {
+      "title": "Pã!",
+      "year": "2010",
+      "role": "Direção",
+      "description": "Enviar relatório de erros?\nVencedor da mostra competitiva da Internet no 9º SMVC.",
+      "type": "Curta",
+      "url": "http://www.youtube.com/watch?v=7ge1Q-ef-nE"
+    },
+    {
+      "title": "Elevador Aeroporto",
+      "year": "2009",
+      "role": "Direção e Montagem",
+      "description": "Curta capturando a agonia da espera.",
+      "type": "Curta",
+      "url": "https://www.youtube.com/watch?v=ptnjlVZcY4I"
+    },
+    {
+      "title": "Augusto, um viciado em games",
+      "year": "2009",
+      "role": "Direção e Produção",
+      "description": "Curta que aborda de forma cômica e reflexiva como pode ser o cotidiano e a vida de um viciado em video games.",
+      "type": "Curta",
+      "url": "https://vimeo.com/3770609"
+    },
+    {
+      "title": "Big Mouse Brasil",
+      "year": "2009",
+      "role": "Direção / Produção",
+      "description": "Projeto de humor consistindo em uma paródia de reality show protagonizada por ratos. Produção em múltiplos episódios e teasers.",
+      "type": "Curta",
+      "url": "https://vimeo.com/6674568"
+    },
+    {
+      "title": "Centelha",
+      "year": "2009",
+      "role": "Assistente de Técnico de Som",
+      "description": "Curta-metragem de ficção científica dirigido por Thiago Moyses, caracterizado por sua atmosfera onírica e especulativa.",
+      "type": "Curta",
+      "url": "https://www.imdb.com/title/tt4493536/"
+    },
+    {
+      "title": "Marias, Anas e Julias",
+      "year": "2008",
+      "role": "Direção e Montagem",
+      "description": "Documentário / Curta sobre as mulheres da cidade.",
+      "type": "Curta",
+      "url": "https://www.youtube.com/watch?v=NszqVMAAUu4"
+    },
+    {
+      "title": "Espectro",
+      "year": "2008",
+      "role": "Som Direto",
+      "description": "Longa-metragem independente dirigido por Thiago Moyses, explorando elementos do thriller psicológico e investigação do subconsciente humano.",
+      "type": "Curta",
+      "url": "https://www.imdb.com/title/tt3736820/"
+    },
+    {
+      "title": "Vide O Galeno",
+      "year": "2006",
+      "role": "Som Direto",
+      "description": "Documentário/Curta dirigido por Thiago Moyses sobre a vida e a arte, focando em personagens e recortes poéticos da cultura.",
+      "type": "Curta",
+      "url": "https://www.imdb.com/title/tt3736788/"
+    },
+    {
+      "title": "A triste e solitária historia de um corpo",
+      "year": "2005",
+      "role": "Direção, Animação e Produção",
+      "description": "Primeira produção VPPP elaborada para o Festival do Minuto de 2005. Uma experiência audiovisual poética focada em isolamento e linguagem corporal.",
+      "type": "Curta",
+      "url": ""
+    }
+  ],
+  "jornalismo_grande_reportagem": [
+    {
+      "title": "Caminhos da Reportagem | Chapecoense: a volta por cima",
+      "year": "202x",
+      "role": "Assistente de Cinegrafia",
+      "description": "",
+      "type": "Grande Reportagem",
+      "url": "https://www.youtube.com/watch?v=agEwV90KxNo"
+    },
+    {
+      "title": "Vale do Café: uma viagem no tempo",
+      "year": "202x",
+      "role": "Assistente de Cinegrafia",
+      "description": "",
+      "type": "Grande Reportagem",
+      "url": "https://www.youtube.com/watch?v=Xto0LJWbqj4"
+    }
+  ],
+  "jornalismo_reportagem": [
+    {
+      "title": "29M - Fora Bolsonaro",
+      "year": "202x",
+      "role": "Direção e Montagem",
+      "description": "",
+      "type": "Reportagem",
+      "url": "https://www.youtube.com/watch?v=8c1dGRbUlWE"
+    },
+    {
+      "title": "Discurso deputada Adriana Accorsi",
+      "year": "202x",
+      "role": "Direção e Montagem",
+      "description": "Fala da deputada e delegada Adriana Accorsi na concentração da passeata e carreata 24J ForaBolsonaro",
+      "type": "Reportagem",
+      "url": "https://www.youtube.com/watch?v=XYBMd04EUaw"
+    }
+  ],
+  "jornalismo_serie": [
+    {
+      "title": "20 de Novembro | Malú Moura",
+      "year": "202x",
+      "role": "Cinegrafista",
+      "description": "",
+      "type": "Série",
+      "url": "https://www.youtube.com/watch?v=klQcV-sX5wI"
+    },
+    {
+      "title": "20 de Novembro | Emíliana Pereira dos Santos",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "",
+      "type": "Série",
+      "url": "https://www.youtube.com/watch?v=QsiXj-h4mq8"
+    },
+    {
+      "title": "20 de Novembro | Joaquim Adorno",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "",
+      "type": "Série",
+      "url": "https://www.youtube.com/watch?v=mHHz1y910Lg"
+    },
+    {
+      "title": "20 de Novembro | Juliana Jardel",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "",
+      "type": "Série",
+      "url": "https://www.youtube.com/watch?v=7o7d0NdWFFA"
+    },
+    {
+      "title": "20 de Novembro | Marcelo Marques",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "",
+      "type": "Série",
+      "url": "https://www.youtube.com/watch?v=UxWub5bvVpo"
+    },
+    {
+      "title": "Manifestações Culturais da Comunidade Kalunga | Ep 02 | Goiás Tec",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "",
+      "type": "Série",
+      "url": "https://www.youtube.com/watch?v=zvlIg0oE8v8"
+    },
+    {
+      "title": "Conexão Ambiental | Centro: revitalizar para quem?",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "",
+      "type": "Série",
+      "url": "https://www.youtube.com/watch?v=InCUFtqtknU"
+    }
+  ],
+  "institucional": [
+    {
+      "title": "A importância de eliminar os retrabalhos",
+      "year": "202x",
+      "role": "Direção, Produção e Montagem",
+      "description": "",
+      "type": "Institucional",
+      "url": "https://www.youtube.com/watch?v=bs-JyFFF5eA"
+    },
+    {
+      "title": "Outubro é mês de aniversários!",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "",
+      "type": "Institucional",
+      "url": "https://www.youtube.com/watch?v=D_di9OmLe1s"
+    },
+    {
+      "title": "Aniversários da Rádio UEG Educativa e da UEG TV",
+      "year": "202x",
+      "role": "Cinegrafia e Fotografia",
+      "description": "É mês de festa! A UEG TV celebra seus 6 anos e a Rádio UEG Educativa completa 7 anos! Juntas, elas promovem ciência, educação e cultura, conectando e inspirando a comunidade. Parabéns à UEG TV e à Rádio UEG Educativa por tantos anos de dedicação e inovação! Que venham mais histórias e conquistas!",
+      "type": "Institucional",
+      "url": "https://www.youtube.com/watch?v=6aJwaHbcNjU"
+    },
+    {
+      "title": "ASECAD",
+      "year": "202x",
+      "role": "Direção e Montagem",
+      "description": "",
+      "type": "Institucional",
+      "url": "https://www.youtube.com/watch?v=JI84XfvOuMg"
+    }
+  ],
+  "programa_tv": [
+    {
+      "title": "Saberes UEG | Extensão na Universidade e os Objetivos de Desenvolvimento Sustentável",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=QbauqDfoRZQ"
+    },
+    {
+      "title": "UEG Entrevista | Depressão e Ansiedade entre adolescentes",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=FYUfQNWcFmM"
+    },
+    {
+      "title": "UEG Entrevista | Mulher na política com Aava Santiago",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=7XS9iN1OTIg"
+    },
+    {
+      "title": "Saberes UEG | O desafio dos Direitos Humanos em um mundo desigual",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=Y57juBlhuCM"
+    },
+    {
+      "title": "SABERES UEG | Balanço das atividades de 2024",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=LkcMoIVjC0I"
+    },
+    {
+      "title": "UEG ENTREVISTA | Etarismo",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=MkBYKnQvGf4"
+    },
+    {
+      "title": "UEG ENTREVISTA | Capacitismo",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=eGdaHEXz9ro"
+    },
+    {
+      "title": "Saberes UEG | Trabalho docente e a inteligência artificial",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=vhQoZkH1QI0"
+    },
+    {
+      "title": "Saberes UEG | Universidade sem medo: enfrentando o assédio",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Programa de TV",
+      "url": "https://www.youtube.com/watch?v=P-QZM4Qg_Ug"
+    }
+  ],
+  "transmissao_eventos": [
+    {
+      "title": "Eleicções UEG 2025 – Entrevista com os candidatos à direção dos I. A. da UEG|Alexandre Garcês - Parte 1",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Eventos gerais",
+      "url": "https://www.youtube.com/watch?v=0KUzExrNZc0"
+    },
+    {
+      "title": "3º EECABC | O ofício de roteirista no contexto da inteligência artificial",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Eventos gerais",
+      "url": "https://www.youtube.com/watch?v=_p6wafQshbI"
+    },
+    {
+      "title": "Tenda Multiétnica | A proteção do patrimônio cultural dos povos indígenas e comunidades tradicionais",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "Conferência de Abertura com FERNANDA KAINGÁNG - Diretora do Museu Nacional dos Povos Indígenas.\nMediação: Marcelo Feijó Charléo",
+      "type": "Eventos gerais",
+      "url": "https://www.youtube.com/watch?v=LmBmabcXZqc"
+    }
+  ],
+  "transmissao_shows": [],
+  "transmissao_videoaulas": [
+    {
+      "title": "Boas Férias 2024 | Goiás Tec",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=tPFFbI4ahOE"
+    },
+    {
+      "title": "Dia da Consciência Negra | Goiás Tec",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=s-b4hpbPcNQ"
+    },
+    {
+      "title": "GEO - 02.12.24 - 9º Ano",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=mbWUV_MIIRU"
+    },
+    {
+      "title": "🔴  MANHÃ - MATEMÁTICA - 04.08.2025  - 3ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=1-jhzI4hC8A"
+    },
+    {
+      "title": "🔴 MANHÃ - LÍNGUA PORTUGUESA - 04.08.2025  - 3ª Série - AULA 02",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=rfmP0G2MsN0"
+    },
+    {
+      "title": "🔴TARDE - LÍNGUA PORTUGUESA - 25.08.25 - 1ª Série - AULA 02",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=reSs7wQfiP0"
+    },
+    {
+      "title": "🔴MANHÃ - QUÍMICA - 25.08.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=Vl42JiQmLRA"
+    },
+    {
+      "title": "🔴MANHÃ - INGLÊS - 25.08.25 - 1   Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=besW3rGddMg"
+    },
+    {
+      "title": "🔴TARDE - LÍNGUA PORTUGUESA - 25.08.25 - 1ª Série - AULA 01",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=hlO5bf3N0Lk"
+    },
+    {
+      "title": "🔴TARDE - INGLÊS - 25.08.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=W7L1Qj1UUqA"
+    },
+    {
+      "title": "🔴TARDE - HISTÓRIA - 25.08.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=pdgw2T1DuPI"
+    },
+    {
+      "title": "🔴TARDE - GEOGRAFIA - 25.08.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=7v8Fw9L-U2w"
+    },
+    {
+      "title": "🔴 MANHÃ - HISTÓRIA - 26.08.25 - 8º Ano - AULA 2",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=NhHRYokjUqo"
+    },
+    {
+      "title": "🔴 MANHÃ - FÍSICA - 27.08.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=VUqdBibW84c"
+    },
+    {
+      "title": "🔴 MANHÃ - BIOLOGIA - 27.08.25 - 1ª Série - AULA 02",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=SxYfTUy_Ogw"
+    },
+    {
+      "title": "🔴 MANHÃ - HISTÓRIA - 27.08.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=GGMY6fZY7n4"
+    },
+    {
+      "title": "🔴 TARDE - LÍNGUA PORTUGUESA - 01.09.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=p4DBc_sHp1E"
+    },
+    {
+      "title": "🔴 MANHÃ - INGLÊS - 01.09.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=8XtjnHYTFRA"
+    },
+    {
+      "title": "🔴 MANHÃ - QUÍMICA - 01.09.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=CyAd9mGL2L8"
+    },
+    {
+      "title": "🔴 MANHÃ - GEOGRAFIA - 01.09.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=qJZSLk3-hi4"
+    },
+    {
+      "title": "🔴 MANHÃ - LÍNGUA PORTUGUESA - 01.09.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=ubncZNZoAlc"
+    },
+    {
+      "title": "🔴 MANHÃ - FÍSICA - 02.09.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=ecgyoa-r1JE"
+    },
+    {
+      "title": "🔴 NOITE - ED. FÍSICA - 15.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=TEEmkB29HjM"
+    },
+    {
+      "title": "🔴 NOITE - LÍNGUA PORTUGUESA - 16.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=gBao5fp3ju4"
+    },
+    {
+      "title": "🔴 NOITE - FÍSICA - 22.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=i-H9pusmFN8"
+    },
+    {
+      "title": "🔴 NOITE - BIOLOGIA - 22.09.25 - 2ª Série  - AULA 01",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=P0C6Pmc75bw"
+    },
+    {
+      "title": "🔴 NOITE - QUÍMICA - 24.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=oFHeOD8MuDs"
+    },
+    {
+      "title": "🔴 NOITE - FILOSOFIA - 24.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=WE8jO7Se4J0"
+    },
+    {
+      "title": "🔴 NOITE - QUÍMICA - 25.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=QUVYflKCTio"
+    },
+    {
+      "title": "🔴 NOITE - FILOSOFIA - 25.09.25 - 2ª Série - AULA 02",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=8kVNUQbhx7w"
+    },
+    {
+      "title": "🔴 NOITE - HISTÓRIA - 25.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=xaccr9o1l44"
+    },
+    {
+      "title": "🔴 NOITE - ED. FÍSICA - 29.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=6ipwOPrWWPM"
+    },
+    {
+      "title": "🔴 NOITE - ARTE - 29.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=uJOzdhup3S8"
+    },
+    {
+      "title": "🔴 NOITE - FÍSICA - 29.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=whrDmH6Ufwg"
+    },
+    {
+      "title": "🔴 NOITE - QUÍMICA - 30.09.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=7TxgfbRFGZ0"
+    },
+    {
+      "title": "🔴 NOITE - QUÍMICA - 30.09.25 - 1ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=DFdsSr1g9Ok"
+    },
+    {
+      "title": "🔴  NOITE - INGLÊS - 02-10.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=EDCjtjmx2po"
+    },
+    {
+      "title": "🔴  NOITE - MATEMÁTICA - 02-10.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=VtMVsH7jyfM"
+    },
+    {
+      "title": "🔴  NOITE - HISTÓRIA - 02-10.25 - 2ª Série",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=qj8U_6900us"
+    },
+    {
+      "title": "🔴 NOITE - GEOGRAFIA - 10.10.25 - 9º Ano - AULA 01",
+      "year": "202x",
+      "role": "DTV e Operador de Streaming",
+      "description": "",
+      "type": "Videoaulas",
+      "url": "https://www.youtube.com/watch?v=T-tWGN2WxQQ"
+    }
+  ],
+  "music_video": [
+    {
+      "title": "Dez-de-Queixo-Caído",
+      "year": "2010",
+      "role": "Direção de Fotografia",
+      "description": "Em novembro dia 20, do ano 1959, a ONU nos comove proclamando a Declaração dos Direitos das Crianças.\nEm 2006, um garoto de Brasília - Reginaldo Sandré - visita o Congresso com uma pergunta na cabeça: o que deu errado?\n\nUm videoclipe-ficção-documental.\nDireção, roteiro e produção de Luiz Carlos Tanaka.\nFiz a fotografia dos planos internos.",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=UEaWi5gUeBY"
+    },
+    {
+      "title": "Atlético MG x Fluminense no aeroporto de Brasília",
+      "year": "2010",
+      "role": "Direção e Montagem",
+      "description": "Registro feito de uma cadeira na área de alimentação do aeroporto de Brasília.",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=RNl3VX8dok4"
+    },
+    {
+      "title": "Insetos",
+      "year": "2010",
+      "role": "Direção, Animação e Montagem",
+      "description": "Quem somos nós?\nTeste do plugin Trapcode Sound Keys do Adobe After Affects.",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=v7CVBpsakT8"
+    },
+    {
+      "title": "Que Bonito Seria",
+      "year": "2009",
+      "role": "Direção e Montagem",
+      "description": "Seria o mundo de felicidade.\nMúsica \"Que bom seria\" de Cascatinha e Inhanha.\nEncontrei essa música no álbum \"BRASIL CAIPIRA - Raridades da Terra dos Pinheirais em 78 Rotações - Vol. I\" disponibilizado no site rarissimos.blogspot.com",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=j8w_sJKiSnw"
+    },
+    {
+      "title": "A abelhinha",
+      "year": "2009",
+      "role": "Direção e Montagem",
+      "description": "Música de Renato Fechine - Abelhinha",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=RVJWo8BYI6U"
+    },
+    {
+      "title": "Cozinha Noturna",
+      "year": "2007",
+      "role": "Direção e Montagem",
+      "description": "Curta na madrugada focado em iluminação e fomes noturnas.",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=gnSbg3DcQvo"
+    },
+    {
+      "title": "Mercado das Coisas 42a Edicao - Dia da Maes",
+      "year": "202x",
+      "role": "Direção e Montagem",
+      "description": "",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=sKNlw5S_0PA"
+    },
+    {
+      "title": "Gab de Oliva | Baile da música divertida | Emoriô | João Donato",
+      "year": "202x",
+      "role": "Direção e Montagem",
+      "description": "",
+      "type": "Clipes musicais",
+      "url": "https://www.youtube.com/watch?v=6hZfj7OnePQ"
+    }
+  ],
+  "experience_link": [],
+  "ignored": []
+}
