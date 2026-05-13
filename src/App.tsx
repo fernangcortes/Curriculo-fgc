@@ -41,7 +41,7 @@ import AIPitchAgent from "./components/AIPitchAgent";
 import { GuidedTour } from "./components/GuidedTour";
 import { WorkItem, Category } from "./types";
 import { collection, onSnapshot } from "firebase/firestore";
-import { db } from "./src/lib/firebase";
+import { db } from "./lib/firebase";
 
 type TabId =
   | "visao-geral"
@@ -296,7 +296,10 @@ const App: React.FC = () => {
                 <div className="relative group">
                   <button
                     type="button"
-                    onClick={() => setRunTour(true)}
+                    onClick={() => {
+                      setRunTour(false);
+                      setTimeout(() => setRunTour(true), 10);
+                    }}
                     className="w-10 h-10 flex items-center justify-center bg-stone-900 dark:bg-zinc-950 text-white hover:bg-black transition-colors shadow-sm cursor-pointer select-none active:bg-stone-800 dark:bg-zinc-200 rounded-lg dark:border dark:border-white/5"
                     aria-label="Tour Guiado"
                   >
@@ -496,7 +499,7 @@ const App: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 print:block print:space-y-6">
                     {!hasSearch && (
                       <div>
-                        <SkillsChart />
+                        <SkillsChart isDarkMode={isDarkMode} />
                       </div>
                     )}
                     <div className={`space-y-8 print:space-y-4 ${hasSearch ? 'col-span-1 md:col-span-2' : ''}`}>
