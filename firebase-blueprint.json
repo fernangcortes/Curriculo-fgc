@@ -1,0 +1,48 @@
+{
+  "entities": {
+    "WorkItem": {
+      "title": "WorkItem",
+      "description": "A portfolio work item (design, audiovisual, etc.)",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "year": { "type": "string" },
+        "role": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "subCategory": { "type": "string" },
+        "url": { "type": "string" },
+        "images": { 
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["title", "category"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Category for portfolio items",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "subcategories": { 
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["name"]
+    }
+  },
+  "firestore": {
+    "works": {
+      "schema": "WorkItem",
+      "description": "Collection of all portfolio works."
+    },
+    "categories": {
+      "schema": "Category",
+      "description": "Collection of categories and subcategories."
+    }
+  }
+}

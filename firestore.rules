@@ -1,0 +1,82 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 0. Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Primitive Helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        (request.auth.token.email_verified == true && request.auth.token.email == 'escrevaprofernando@gmail.com')
+      );
+    }
+
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+
+    function isValidId(id) { 
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); 
+    }
+
+    // Entity Validators
+    function isValidWorkItem(data) {
+      return data.keys().hasAll(['title', 'category'])
+        && data.title is string && data.title.size() <= 200
+        && data.category is string && data.category.size() <= 100
+        && data.get('year', '') is string
+        && data.get('role', '') is string
+        && data.get('description', '') is string
+        && data.get('subCategory', '') is string
+        && data.get('url', '') is string
+        && data.get('images', []) is list
+        && data.get('inResume', false) is bool
+        && data.get('createdAt', 0) is number
+        && data.get('updatedAt', 0) is number;
+    }
+
+    function isValidCategory(data) {
+      return data.keys().hasAll(['name'])
+        && data.name is string && data.name.size() <= 100
+        && data.get('subcategories', []) is list;
+    }
+
+    // Collections
+    match /admins/{userId} {
+      allow read: if isAdmin();
+      // Only existing admins can create new admins
+      allow write: if isAdmin();
+    }
+
+    match /works/{workId} {
+      allow read: if true; // Public portfolio
+      allow create: if isAdmin() 
+                    && isValidId(workId)
+                    && isValidWorkItem(incoming());
+      allow update: if isAdmin() 
+                    && isValidId(workId)
+                    && isValidWorkItem(incoming());
+      allow delete: if isAdmin() && isValidId(workId);
+    }
+
+    match /categories/{categoryId} {
+      allow read: if true; // Public categories
+      allow create: if isAdmin() 
+                    && isValidId(categoryId)
+                    && isValidCategory(incoming())
+                    && incoming().keys().hasOnly(['name', 'subcategories']);
+      allow update: if isAdmin() 
+                    && isValidId(categoryId)
+                    && isValidCategory(incoming())
+                    && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'subcategories']);
+      allow delete: if isAdmin() && isValidId(categoryId);
+    }
+  }
+}
