@@ -537,8 +537,8 @@ const App: React.FC = () => {
                 icon={<Camera className="w-5 h-5" />}
               >
                 <div className="flex flex-col">
-                  {filteredExperience.map((item) => (
-                    <ExperienceCard key={item.id} data={item} />
+                  {filteredExperience.map((item, idx) => (
+                    <ExperienceCard key={item.id} data={item} index={idx} />
                   ))}
                 </div>
 
@@ -584,7 +584,11 @@ const App: React.FC = () => {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 print:grid-cols-2 print:gap-4">
                         {group.projects.map((project, idx) => (
-                          <div key={idx} className="flex h-full">
+                          <div 
+                            key={idx} 
+                            className="flex h-full animate-stagger-fade-in print:animate-none"
+                            style={{ animationDelay: `${idx * 100}ms` }}
+                          >
                             <a
                               href={project.url || "#"}
                               target={project.url ? "_blank" : undefined}

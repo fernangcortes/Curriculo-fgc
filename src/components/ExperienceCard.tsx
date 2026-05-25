@@ -3,11 +3,16 @@ import { ExperienceItem } from '../types';
 
 interface ExperienceCardProps {
   data: ExperienceItem;
+  index?: number;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ data }) => {
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ data, index }) => {
+  const style = index !== undefined ? { animationDelay: `${index * 120}ms` } : {};
   return (
-    <div className="relative pl-8 md:pl-0 pb-12 last:pb-0 group md:flex transition-all duration-300">
+    <div 
+      className="relative pl-8 md:pl-0 pb-12 last:pb-0 group md:flex transition-all duration-300 animate-stagger-fade-in print:animate-none"
+      style={style}
+    >
       {/* Mobile Timeline Line */}
       <div className="absolute left-[3px] top-[14px] bottom-0 w-[2px] bg-stone-200 dark:bg-zinc-700 group-hover:bg-emerald-300/80 transition-colors duration-500 md:hidden group-last:bg-gradient-to-b group-last:from-stone-200 dark:from-zinc-700 group-last:to-transparent group-hover:group-last:from-emerald-300"></div>
       
